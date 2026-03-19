@@ -13,21 +13,9 @@ export function DeviceBindingModal({ isOpen, onClose, onBindSuccess }: DeviceBin
   const [bindingStage, setBindingStage] = useState<BindingStage>("intro");
 
   const handleBindClick = async () => {
-    // 开始搜索设备
-    setBindingStage("searching");
-    
-    // 模拟搜索过程
-    await new Promise(resolve => setTimeout(resolve, 2000));
-    
-    // 进入连接阶段
-    setBindingStage("connecting");
-    
-    // 模拟连接过程
-    await new Promise(resolve => setTimeout(resolve, 2000));
-    
-    // 连接成功
+    // 直接显示绑定成功
     setBindingStage("success");
-    
+
     // 2秒后关闭弹窗并通知父组件
     setTimeout(() => {
       onBindSuccess?.();
@@ -119,18 +107,23 @@ export function DeviceBindingModal({ isOpen, onClose, onBindSuccess }: DeviceBin
                   animate={{ opacity: 1 }}
                   exit={{ opacity: 0 }}
                 >
-                  {/* 图标 */}
+                  {/* 图标 - 华为logo */}
                   <div
                     className="flex items-center justify-center mx-auto"
                     style={{
                       width: "100px",
                       height: "100px",
-                      background: "linear-gradient(135deg, #EAEBFF 0%, #F5F3FF 100%)",
+                      background: "linear-gradient(135deg, #FF2400 0%, #E60012 100%)",
                       borderRadius: "24px",
                       marginBottom: "24px"
                     }}
                   >
-                    <Watch className="w-12 h-12" style={{ color: "#2B5BFF" }} />
+                    <svg viewBox="0 0 120 90" className="w-16 h-16" fill="white">
+                      <path d="M60 10C60 10 45 25 45 40C45 55 60 70 60 70C60 70 75 55 75 40C75 25 60 10 60 10Z"/>
+                      <circle cx="35" cy="45" r="8"/>
+                      <circle cx="85" cy="45" r="8"/>
+                      <path d="M43 55L60 75L77 55" strokeWidth="0"/>
+                    </svg>
                   </div>
 
                   {/* 标题 */}
@@ -278,7 +271,7 @@ export function DeviceBindingModal({ isOpen, onClose, onBindSuccess }: DeviceBin
                       e.currentTarget.style.boxShadow = "0 4px 16px rgba(43, 91, 255, 0.25)";
                     }}
                   >
-                    <Watch className="w-5 h-5" />
+                    <CheckCircle className="w-5 h-5" />
                     立即绑定设备
                   </button>
 
