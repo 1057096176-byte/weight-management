@@ -13,16 +13,13 @@ export function DeviceBindingModal({ isOpen, onClose, onBindSuccess }: DeviceBin
   const [bindingStage, setBindingStage] = useState<BindingStage>("intro");
 
   const handleBindClick = async () => {
-    // 直接显示绑定成功
-    setBindingStage("success");
-
-    // 2秒后关闭弹窗并通知父组件
-    setTimeout(() => {
-      onBindSuccess?.();
-      onClose();
-      // 重置状态
-      setTimeout(() => setBindingStage("intro"), 300);
-    }, 2000);
+    // 直接关闭弹窗并提示绑定成功
+    onBindSuccess?.();
+    onClose();
+    // 重置状态
+    setTimeout(() => setBindingStage("intro"), 300);
+    // 提示绑定成功
+    alert("绑定成功");
   };
 
   const handleClose = () => {
