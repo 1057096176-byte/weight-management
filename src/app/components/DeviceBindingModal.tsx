@@ -223,27 +223,6 @@ export function DeviceBindingModal({ isOpen, onClose, onBindSuccess }: DeviceBin
                     </div>
                   </div>
 
-                  {/* 支持的设备 */}
-                  <div
-                    style={{
-                      padding: "16px",
-                      backgroundColor: "#FFF9E6",
-                      borderRadius: "12px",
-                      border: "1px solid #FFE58F",
-                      marginBottom: "24px"
-                    }}
-                  >
-                    <div style={{ display: "flex", alignItems: "center", gap: "8px", marginBottom: "8px" }}>
-                      <Bluetooth className="w-4 h-4" style={{ color: "#FA8C16" }} />
-                      <span style={{ fontSize: "14px", fontWeight: 600, color: "#AD6800" }}>
-                        支持的设备
-                      </span>
-                    </div>
-                    <div style={{ fontSize: "13px", color: "#AD6800", lineHeight: "1.5" }}>
-                      华为手表、小米手环、Apple Watch等主流智能设备
-                    </div>
-                  </div>
-
                   {/* 操作按钮 */}
                   <button
                     onClick={handleBindClick}
