@@ -1109,23 +1109,9 @@ export default function Home() {
         </button>
         <h1 className="font-semibold">体重管理助手</h1>
         <div className="flex items-center gap-2">
-          {/* 老用户：切换设备/代餐显示 */}
+          {/* 老用户：切换代餐显示 */}
           {userStatus === "existing" && (
             <>
-              <button
-                onClick={() => setHasDeviceBound(!hasDeviceBound)}
-                className="flex items-center gap-1.5 px-2.5 py-1.5 text-xs rounded-lg transition-all"
-                style={{
-                  background: hasDeviceBound ? "rgba(16, 185, 129, 0.1)" : "rgba(156, 163, 175, 0.1)",
-                  backdropFilter: "blur(10px)",
-                  border: hasDeviceBound ? "1px solid rgba(16, 185, 129, 0.2)" : "1px solid rgba(156, 163, 175, 0.2)",
-                  color: hasDeviceBound ? "#10B981" : "#6B7280",
-                  fontWeight: 500
-                }}
-                title={hasDeviceBound ? "已绑定设备" : "未绑定设备"}
-              >
-                📱
-              </button>
               <button
                 onClick={() => setShowMealReminder(!showMealReminder)}
                 className="flex items-center gap-1.5 px-2.5 py-1.5 text-xs rounded-lg transition-all"
@@ -1172,11 +1158,6 @@ export default function Home() {
             time={new Date().toLocaleTimeString("zh-CN", { hour: "2-digit", minute: "2-digit" })}
             planInfo={userStatus === "existing" ? planInfo : undefined}
           />
-
-          {/* 老用户：显示设备数据卡片（如果已绑定设备） */}
-          {userStatus === "existing" && hasDeviceBound && (
-            <DeviceDataCard />
-          )}
 
           {/* 老用户：显示代餐提醒卡片 */}
           {userStatus === "existing" && showMealReminder && (
