@@ -118,7 +118,7 @@ export function DeviceBindingModal({ isOpen, onClose, onBindSuccess }: DeviceBin
                     <img
                       src="https://minimax-algeng-chat-tts.oss-cn-wulanchabu.aliyuncs.com/ccv2%2F2026-03-19%2FMiniMax-M2.7%2F2034449464730592081%2F3f365398cd23d3e7c114633e76b7e3fe688e9c7b95d952d4e512adec27e62c27..png?Expires=1774005494&OSSAccessKeyId=LTAI5tGLnRTkBjLuYPjNcKQ8&Signature=z%2Fedw7MSBR4c2NyDncBmNPWjlsQ%3D"
                       alt="Huawei"
-                      className="w-16 h-16 object-contain"
+                      className="w-full h-full object-cover"
                     />
                   </div>
 
