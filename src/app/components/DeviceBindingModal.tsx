@@ -115,11 +115,11 @@ export function DeviceBindingModal({ isOpen, onClose, onBindSuccess }: DeviceBin
                       marginBottom: "24px"
                     }}
                   >
-                    <svg viewBox="0 0 89.6 80.8" className="w-16 h-16" fill="white">
-                      <path d="M44.8 0C44.8 0 35.8 16 22.4 16C9 16 0 0 0 0V26.8C0 40.4 11.2 52 25.2 52C39.2 52 44.8 40.4 44.8 26.8V0Z"/>
-                      <path d="M44.8 0C44.8 0 35.8 16 22.4 16C9 16 0 0 0 0V26.8C0 40.4 11.2 52 25.2 52C39.2 52 44.8 40.4 44.8 26.8V0Z" transform="translate(44.8 28.8)"/>
-                      <ellipse cx="44.8" cy="58.4" rx="44.8" ry="22.4"/>
-                    </svg>
+                    <img
+                      src="https://minimax-algeng-chat-tts.oss-cn-wulanchabu.aliyuncs.com/ccv2%2F2026-03-19%2FMiniMax-M2.7%2F2034449464730592081%2F3f365398cd23d3e7c114633e76b7e3fe688e9c7b95d952d4e512adec27e62c27..png?Expires=1774005494&OSSAccessKeyId=LTAI5tGLnRTkBjLuYPjNcKQ8&Signature=z%2Fedw7MSBR4c2NyDncBmNPWjlsQ%3D"
+                      alt="Huawei"
+                      className="w-16 h-16 object-contain"
+                    />
                   </div>
 
                   {/* 标题 */}
