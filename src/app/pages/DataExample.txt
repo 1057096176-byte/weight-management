@@ -1,0 +1,53 @@
+// 这是使用新卡片组件的示例代码
+
+// 1. 单个指标示例 - 步数（已更新）
+<IndicatorCard
+  icon={<Footprints className="w-4 h-4" />}
+  iconColor="#F59E0B"
+  iconBg="linear-gradient(135deg, #FEF3C7 0%, #FDE68A 100%)"
+  title="步数"
+  value={getLatestValue(stepsData["7days"])}
+  unit="步"
+  data={stepsData["7days"]}
+  chartColor="#F59E0B"
+  expanded={expandedIndicator === "steps"}
+  onToggle={() => setExpandedIndicator(expandedIndicator === "steps" ? null : "steps")}
+  syncStatus="synced"
+>
+  {/* 展开后的图表内容 */}
+</IndicatorCard>
+
+// 2. 热量指标示例
+<IndicatorCard
+  icon={<Flame className="w-4 h-4" />}
+  iconColor="#DC2626"
+  iconBg="linear-gradient(135deg, #FEE2E2 0%, #FECACA 100%)"
+  title="热量消耗"
+  value={getLatestValue(caloriesData["7days"])}
+  unit="卡"
+  data={caloriesData["7days"]}
+  chartColor="#DC2626"
+  expanded={expandedIndicator === "calories"}
+  onToggle={() => setExpandedIndicator(expandedIndicator === "calories" ? null : "calories")}
+  syncStatus="synced"
+>
+  {/* 展开后的图表内容 */}
+</IndicatorCard>
+
+// 3. 睡眠卡片示例（合并多个指标）
+<SleepCard
+  title="睡眠情况"
+  subIndicators={[
+    { label: "总时长", value: getLatestValue(totalSleepData["7days"]), unit: "小时" },
+    { label: "深睡", value: getLatestValue(deepSleepData["7days"]), unit: "小时" },
+    { label: "浅睡", value: getLatestValue(lightSleepData["7days"]), unit: "小时" },
+  ]}
+  data={totalSleepData["7days"]}
+  chartColor="#6366F1"
+  expanded={expandedIndicator === "sleep"}
+  onToggle={() => setExpandedIndicator(expandedIndicator === "sleep" ? null : "sleep")}
+>
+  {/* 展开后的图表内容 */}
+</SleepCard>
+
+// 所有其他指标都遵循同样的模式

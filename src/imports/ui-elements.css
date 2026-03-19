@@ -1,0 +1,561 @@
+/* Rectangle 99 */
+
+position: absolute;
+width: 351px;
+height: 202px;
+left: 26px;
+top: 386px;
+
+background: #FFFFFF;
+border-radius: 13px;
+
+
+/* Group 25 */
+
+position: absolute;
+width: 84px;
+height: 24px;
+left: 139px;
+top: 400px;
+
+
+
+/* Rectangle 18 */
+
+box-sizing: border-box;
+
+position: absolute;
+width: 84px;
+height: 24px;
+left: 139px;
+top: 400px;
+
+opacity: 0.4;
+border: 1px solid rgba(63, 45, 255, 0.6);
+border-radius: 6px;
+
+
+/* 执行中·第2天 */
+
+position: absolute;
+width: 69px;
+height: 12px;
+left: 147px;
+top: 406px;
+
+font-family: 'PingFang SC';
+font-style: normal;
+font-weight: 400;
+font-size: 11px;
+line-height: 12px;
+/* identical to box height, or 109% */
+
+color: #3F2DFF;
+
+
+
+/* 轻盈计划 */
+
+position: absolute;
+width: 90px;
+height: 26px;
+left: 43px;
+top: 399px;
+
+font-family: 'Inter';
+font-style: normal;
+font-weight: 700;
+font-size: 20px;
+line-height: 26px;
+/* identical to box height, or 130% */
+
+color: #131142;
+
+
+
+/* 查看数据 */
+
+position: absolute;
+width: 52px;
+height: 16px;
+left: 306px;
+top: 400px;
+
+font-family: 'Inter';
+font-style: normal;
+font-weight: 400;
+font-size: 13px;
+line-height: 16px;
+/* identical to box height */
+
+color: #3F2DFF;
+
+
+
+/* Rectangle 102 */
+
+position: absolute;
+width: 49px;
+height: 86px;
+left: 319px;
+top: 437px;
+
+background: #EEEFFC;
+border-radius: 6px;
+
+
+/* 63% */
+
+position: absolute;
+width: 25px;
+height: 15px;
+left: 332px;
+top: 501px;
+
+font-family: 'Inter';
+font-style: normal;
+font-weight: 400;
+font-size: 12px;
+line-height: 15px;
+/* identical to box height */
+text-align: right;
+
+color: #000000;
+
+
+
+/* 日 */
+
+position: absolute;
+width: 16px;
+height: 17px;
+left: calc(50% - 16px/2 - 145px);
+top: 441px;
+
+font-family: 'Inter';
+font-style: normal;
+font-weight: 400;
+font-size: 14px;
+line-height: 17px;
+/* identical to box height */
+
+color: #7F88AA;
+
+
+
+/* 一 */
+
+position: absolute;
+width: 16px;
+height: 17px;
+left: calc(50% - 16px/2 - 98px);
+top: 441px;
+
+font-family: 'Inter';
+font-style: normal;
+font-weight: 400;
+font-size: 14px;
+line-height: 17px;
+/* identical to box height */
+
+color: #7F88AA;
+
+
+
+/* 二 */
+
+position: absolute;
+width: 17px;
+height: 17px;
+left: calc(50% - 17px/2 - 51.5px);
+top: 441px;
+
+font-family: 'Inter';
+font-style: normal;
+font-weight: 400;
+font-size: 14px;
+line-height: 17px;
+/* identical to box height */
+
+color: #7F88AA;
+
+
+
+/* 三 */
+
+position: absolute;
+width: 17px;
+height: 17px;
+left: calc(50% - 17px/2 - 2.5px);
+top: 441px;
+
+font-family: 'Inter';
+font-style: normal;
+font-weight: 400;
+font-size: 14px;
+line-height: 17px;
+/* identical to box height */
+
+color: #7F88AA;
+
+
+
+/* 四 */
+
+position: absolute;
+width: 17px;
+height: 17px;
+left: calc(50% - 17px/2 + 46.5px);
+top: 441px;
+
+font-family: 'Inter';
+font-style: normal;
+font-weight: 400;
+font-size: 14px;
+line-height: 17px;
+/* identical to box height */
+
+color: #7F88AA;
+
+
+
+/* 五 */
+
+position: absolute;
+width: 16px;
+height: 17px;
+left: calc(50% - 16px/2 + 95px);
+top: 441px;
+
+font-family: 'Inter';
+font-style: normal;
+font-weight: 400;
+font-size: 14px;
+line-height: 17px;
+/* identical to box height */
+
+color: #7F88AA;
+
+
+
+/* 今 */
+
+position: absolute;
+width: 16px;
+height: 17px;
+left: calc(50% - 16px/2 + 144px);
+top: 441px;
+
+font-family: 'Inter';
+font-style: normal;
+font-weight: 400;
+font-size: 14px;
+line-height: 17px;
+/* identical to box height */
+
+color: #7F88AA;
+
+
+
+/* Ellipse 23 */
+
+box-sizing: border-box;
+
+position: absolute;
+width: 32px;
+height: 32px;
+left: 40px;
+top: 466px;
+
+background: #FFFFFF;
+border: 3px solid #D5D7F0;
+
+
+/* Ellipse 24 */
+
+box-sizing: border-box;
+
+position: absolute;
+width: 32px;
+height: 32px;
+left: 85px;
+top: 466px;
+
+background: #FFFFFF;
+border: 3px solid #D5D7F0;
+
+
+/* Ellipse 25 */
+
+box-sizing: border-box;
+
+position: absolute;
+width: 32px;
+height: 32px;
+left: 133px;
+top: 466px;
+
+background: #FFFFFF;
+border: 3px solid #D5D7F0;
+
+
+/* Ellipse 26 */
+
+box-sizing: border-box;
+
+position: absolute;
+width: 32px;
+height: 32px;
+left: 181px;
+top: 466px;
+
+background: #FFFFFF;
+border: 3px solid #D5D7F0;
+
+
+/* Ellipse 27 */
+
+box-sizing: border-box;
+
+position: absolute;
+width: 32px;
+height: 32px;
+left: 229px;
+top: 466px;
+
+background: #FFFFFF;
+border: 3px solid #D5D7F0;
+
+
+/* Ellipse 28 */
+
+box-sizing: border-box;
+
+position: absolute;
+width: 32px;
+height: 32px;
+left: 280px;
+top: 466px;
+
+background: #FFFFFF;
+border: 3px solid #D5D7F0;
+
+
+/* Ellipse 31 */
+
+box-sizing: border-box;
+
+position: absolute;
+width: 32px;
+height: 32px;
+left: 280px;
+top: 466px;
+
+background: #FFFFFF;
+border: 3px solid #3F2DFF;
+
+
+/* Ellipse 29 */
+
+box-sizing: border-box;
+
+position: absolute;
+width: 32px;
+height: 32px;
+left: 329px;
+top: 466px;
+
+border: 3px solid #D5D7F0;
+
+
+/* Ellipse 30 */
+
+box-sizing: border-box;
+
+position: absolute;
+width: 18px;
+height: 29px;
+left: 341px;
+top: 467px;
+
+border: 3px solid #3F2DFF;
+
+
+/* 6 */
+
+position: absolute;
+width: 9px;
+height: 17px;
+left: 52px;
+top: 474px;
+
+font-family: 'Inter';
+font-style: normal;
+font-weight: 500;
+font-size: 14px;
+line-height: 17px;
+/* identical to box height */
+text-align: right;
+
+color: #000000;
+
+
+
+/* 7 */
+
+position: absolute;
+width: 9px;
+height: 17px;
+left: 96px;
+top: 473px;
+
+font-family: 'Inter';
+font-style: normal;
+font-weight: 500;
+font-size: 14px;
+line-height: 17px;
+/* identical to box height */
+text-align: right;
+
+color: #000000;
+
+
+
+/* 8 */
+
+position: absolute;
+width: 9px;
+height: 17px;
+left: 145px;
+top: 473px;
+
+font-family: 'Inter';
+font-style: normal;
+font-weight: 500;
+font-size: 14px;
+line-height: 17px;
+/* identical to box height */
+text-align: right;
+
+color: #000000;
+
+
+
+/* 9 */
+
+position: absolute;
+width: 9px;
+height: 17px;
+left: 193px;
+top: 473px;
+
+font-family: 'Inter';
+font-style: normal;
+font-weight: 500;
+font-size: 14px;
+line-height: 17px;
+/* identical to box height */
+text-align: right;
+
+color: #000000;
+
+
+
+/* 10 */
+
+position: absolute;
+width: 16px;
+height: 17px;
+left: 237px;
+top: 473px;
+
+font-family: 'Inter';
+font-style: normal;
+font-weight: 500;
+font-size: 14px;
+line-height: 17px;
+/* identical to box height */
+text-align: right;
+
+color: #000000;
+
+
+
+/* 11 */
+
+position: absolute;
+width: 14px;
+height: 17px;
+left: 289px;
+top: 473px;
+
+font-family: 'Inter';
+font-style: normal;
+font-weight: 500;
+font-size: 14px;
+line-height: 17px;
+/* identical to box height */
+text-align: right;
+
+color: #000000;
+
+
+
+/* 12 */
+
+position: absolute;
+width: 16px;
+height: 17px;
+left: 335px;
+top: 473px;
+
+font-family: 'Inter';
+font-style: normal;
+font-weight: 500;
+font-size: 14px;
+line-height: 17px;
+/* identical to box height */
+text-align: right;
+
+color: #000000;
+
+
+
+/* Group 24 */
+
+position: absolute;
+width: 132px;
+height: 40px;
+left: 43px;
+top: 528px;
+
+
+
+/* Rectangle 17 */
+
+position: absolute;
+width: 132px;
+height: 40px;
+left: 43px;
+top: 528px;
+
+background: #D2D5FF;
+border-radius: 36px;
+
+
+/* 去打卡 */
+
+position: absolute;
+width: 45px;
+height: 18px;
+left: 87px;
+top: 539px;
+
+font-family: 'Inter';
+font-style: normal;
+font-weight: 600;
+font-size: 15px;
+line-height: 18px;
+
+color: #3F2DFF;
+

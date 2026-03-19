@@ -1,0 +1,58 @@
+/* Group 5 */
+
+position: absolute;
+width: 644px;
+height: 876px;
+left: -125px;
+top: 0px;
+
+
+
+/* Vector 1 */
+
+position: absolute;
+width: 246.5px;
+height: 398px;
+left: 0px;
+top: 0px;
+
+background: #B3B7FF;
+filter: blur(150px);
+
+
+/* Vector 2 */
+
+position: absolute;
+width: 399.5px;
+height: 216.5px;
+left: 0px;
+top: 659.5px;
+
+background: #C5D8FF;
+filter: blur(100px);
+
+
+/* Ellipse 1 */
+
+position: absolute;
+width: 223px;
+height: 223px;
+left: -125px;
+top: 548px;
+
+background: #FFE3CB;
+opacity: 0.9;
+filter: blur(150px);
+
+
+/* Ellipse 1 */
+
+position: absolute;
+width: 223px;
+height: 223px;
+left: 296px;
+top: 156px;
+
+background: #FFD4B0;
+opacity: 0.9;
+filter: blur(150px);

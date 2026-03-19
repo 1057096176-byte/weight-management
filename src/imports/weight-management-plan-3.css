@@ -1,0 +1,1175 @@
+/* 查看图片 5 */
+
+position: absolute;
+width: 326px;
+height: 239px;
+left: 160px;
+top: 44px;
+
+background: url(查看图片.png);
+mix-blend-mode: color-burn;
+opacity: 0.8;
+
+
+/* 轻盈计划 */
+
+position: absolute;
+width: 107px;
+height: 26px;
+left: 12px;
+top: 109px;
+
+font-family: 'Inter';
+font-style: normal;
+font-weight: 700;
+font-size: 24px;
+line-height: 26px;
+/* identical to box height, or 108% */
+
+color: #131142;
+
+
+
+/* 定制化体重管理方案· 预计3个月达成目标 */
+
+position: absolute;
+width: 259px;
+height: 20px;
+left: 12px;
+top: 146px;
+
+font-family: 'PingFang SC';
+font-style: normal;
+font-weight: 600;
+font-size: 14px;
+line-height: 20px;
+/* identical to box height */
+
+color: #131142;
+
+
+
+/* 重新定制 */
+
+position: absolute;
+width: 60px;
+height: 21px;
+left: 330px;
+top: 110px;
+
+font-family: 'PingFang SC';
+font-style: normal;
+font-weight: 600;
+font-size: 15px;
+line-height: 21px;
+/* identical to box height */
+
+color: #131142;
+
+
+
+/* Group 74 */
+
+position: absolute;
+width: 378px;
+height: 95px;
+left: 12px;
+top: 406px;
+
+
+
+/* Rectangle 96 */
+
+box-sizing: border-box;
+
+position: absolute;
+width: 378px;
+height: 95px;
+left: 12px;
+top: 406px;
+
+background: #FFFFFF;
+border: 1px solid #FFFFFF;
+border-radius: 20px 13px 13px 13px;
+
+
+/* 你的目标体重 */
+
+position: absolute;
+width: 84px;
+height: 17px;
+left: 31px;
+top: 431px;
+
+font-family: 'Inter';
+font-style: normal;
+font-weight: 500;
+font-size: 14px;
+line-height: 17px;
+/* identical to box height */
+
+color: #000000;
+
+
+
+/* 68KG */
+
+position: absolute;
+width: 63px;
+height: 27px;
+left: 317px;
+top: 428px;
+
+font-family: 'Inter';
+font-style: normal;
+font-weight: 700;
+font-size: 22px;
+line-height: 27px;
+/* identical to box height */
+
+color: #000000;
+
+
+
+/* 您的原始体重80KG，您需要在此基础上减重10KG */
+
+position: absolute;
+width: 303px;
+height: 18px;
+left: 29px;
+top: 462px;
+
+font-family: 'PingFang SC';
+font-style: normal;
+font-weight: 400;
+font-size: 13px;
+line-height: 18px;
+
+color: #7F88AA;
+
+
+
+/* Group 75 */
+
+position: absolute;
+width: 378px;
+height: 183px;
+left: 12px;
+top: 206px;
+
+
+
+/* 你的管理目标 */
+
+position: absolute;
+width: 106px;
+height: 18px;
+left: 13px;
+top: 206px;
+
+font-family: 'Inter';
+font-style: normal;
+font-weight: 600;
+font-size: 15px;
+line-height: 18px;
+
+color: #131142;
+
+
+
+/* Rectangle 2 */
+
+box-sizing: border-box;
+
+position: absolute;
+width: 183px;
+height: 154px;
+left: 12px;
+top: 235px;
+
+background: #FFFFFF;
+border: 1px solid #FFFFFF;
+border-radius: 20px 13px 13px 13px;
+
+
+/* Rectangle 95 */
+
+box-sizing: border-box;
+
+position: absolute;
+width: 183px;
+height: 154px;
+left: 207px;
+top: 235px;
+
+background: #FFFFFF;
+border: 1px solid #FFFFFF;
+border-radius: 20px 13px 13px 13px;
+
+
+/* 每天热量摄入 */
+
+position: absolute;
+width: 84px;
+height: 17px;
+left: 49px;
+top: 254px;
+
+font-family: 'Inter';
+font-style: normal;
+font-weight: 500;
+font-size: 14px;
+line-height: 17px;
+/* identical to box height */
+
+color: #000000;
+
+
+
+/* 每周运动量 */
+
+position: absolute;
+width: 70px;
+height: 17px;
+left: 246px;
+top: 254px;
+
+font-family: 'Inter';
+font-style: normal;
+font-weight: 500;
+font-size: 14px;
+line-height: 17px;
+/* identical to box height */
+
+color: #000000;
+
+
+
+/* boxicons:hot-filled */
+
+position: absolute;
+width: 20px;
+height: 20px;
+left: 25px;
+top: 252px;
+
+
+
+/* Vector */
+
+position: absolute;
+left: 12.5%;
+right: 12.54%;
+top: 10.25%;
+bottom: 8.37%;
+
+background: #DE7740;
+
+
+/* solar:passport-bold */
+
+position: absolute;
+width: 20px;
+height: 20px;
+left: 223px;
+top: 252px;
+
+
+
+/* Vector */
+
+position: absolute;
+left: 18.37%;
+right: 25%;
+top: 9.61%;
+bottom: 36.46%;
+
+background: #6472FF;
+
+
+/* Vector */
+
+position: absolute;
+left: 16.67%;
+right: 16.67%;
+top: 20.83%;
+bottom: 8.33%;
+
+background: #6472FF;
+
+
+/* 1000-1500 */
+
+position: absolute;
+width: 127px;
+height: 27px;
+left: 26px;
+top: 290px;
+
+font-family: 'Inter';
+font-style: normal;
+font-weight: 700;
+font-size: 22px;
+line-height: 27px;
+/* identical to box height */
+
+color: #000000;
+
+
+
+/* 150-180 */
+
+position: absolute;
+width: 90px;
+height: 27px;
+left: 226px;
+top: 290px;
+
+font-family: 'Inter';
+font-style: normal;
+font-weight: 600;
+font-size: 22px;
+line-height: 27px;
+/* identical to box height */
+
+color: #000000;
+
+
+
+/* 千卡 */
+
+position: absolute;
+width: 34px;
+height: 16px;
+left: 153px;
+top: 298px;
+
+font-family: 'Inter';
+font-style: normal;
+font-weight: 400;
+font-size: 13px;
+line-height: 16px;
+/* identical to box height */
+
+color: #000000;
+
+
+
+/* 分钟 */
+
+position: absolute;
+width: 34px;
+height: 16px;
+left: 321px;
+top: 298px;
+
+font-family: 'Inter';
+font-style: normal;
+font-weight: 400;
+font-size: 13px;
+line-height: 16px;
+/* identical to box height */
+
+color: #000000;
+
+
+
+/* 碳水、蛋白质、脂肪的摄入比例建议2:1:1 */
+
+position: absolute;
+width: 147px;
+height: 36px;
+left: 29px;
+top: 330px;
+
+font-family: 'PingFang SC';
+font-style: normal;
+font-weight: 400;
+font-size: 13px;
+line-height: 18px;
+
+color: #7F88AA;
+
+
+
+/* 每周运动频次5次，减重之k路，每一步都算数。 */
+
+position: absolute;
+width: 147px;
+height: 36px;
+left: 227px;
+top: 330px;
+
+font-family: 'PingFang SC';
+font-style: normal;
+font-weight: 400;
+font-size: 13px;
+line-height: 18px;
+
+color: #7F88AA;
+
+
+
+/* Rectangle 2 */
+
+box-sizing: border-box;
+
+position: absolute;
+width: 378px;
+height: 287px;
+left: 12px;
+top: 512px;
+
+background: #FFFFFF;
+border: 1px solid #FFFFFF;
+border-radius: 20px 13px 13px 13px;
+
+
+/* Group 37 */
+
+position: absolute;
+width: 99px;
+height: 18px;
+left: 274px;
+top: 532px;
+
+
+
+/* 换一份食谱 */
+
+position: absolute;
+width: 75px;
+height: 18px;
+left: 274px;
+top: 532px;
+
+font-family: 'Inter';
+font-style: normal;
+font-weight: 500;
+font-size: 15px;
+line-height: 18px;
+
+color: #514FFF;
+
+
+
+/* icon-park-outline:refresh */
+
+position: absolute;
+width: 18px;
+height: 18px;
+left: 355px;
+top: 532px;
+
+
+
+/* Vector */
+
+position: absolute;
+left: 12.5%;
+right: 12.5%;
+top: 12.5%;
+bottom: 12.5%;
+
+border: 1.5px solid #514FFF;
+
+
+/* Rectangle 95 */
+
+box-sizing: border-box;
+
+position: absolute;
+width: 378px;
+height: 279px;
+left: 12px;
+top: 816px;
+
+background: #FFFFFF;
+border: 1px solid #FFFFFF;
+border-radius: 20px 13px 13px 13px;
+
+
+/* 饮食食谱推荐 */
+
+position: absolute;
+width: 90px;
+height: 18px;
+left: 27px;
+top: 531px;
+
+font-family: 'Inter';
+font-style: normal;
+font-weight: 600;
+font-size: 15px;
+line-height: 18px;
+
+color: #000000;
+
+
+
+/* 运动计划 */
+
+position: absolute;
+width: 60px;
+height: 18px;
+left: 27px;
+top: 835px;
+
+font-family: 'Inter';
+font-style: normal;
+font-weight: 600;
+font-size: 15px;
+line-height: 18px;
+
+color: #000000;
+
+
+
+/* Group 25 */
+
+position: absolute;
+width: 84px;
+height: 24px;
+left: 123px;
+top: 109px;
+
+
+
+/* Rectangle 18 */
+
+box-sizing: border-box;
+
+position: absolute;
+width: 84px;
+height: 24px;
+left: 123px;
+top: 109px;
+
+opacity: 0.4;
+border: 1px solid #F0F2FF;
+border-radius: 6px;
+
+
+/* 待执行·第0天 */
+
+position: absolute;
+width: 69px;
+height: 12px;
+left: 131px;
+top: 115px;
+
+font-family: 'PingFang SC';
+font-style: normal;
+font-weight: 400;
+font-size: 11px;
+line-height: 12px;
+/* identical to box height, or 109% */
+
+color: #3F2DFF;
+
+
+
+/* Group 72 */
+
+position: absolute;
+width: 378px;
+height: 46px;
+left: 12px;
+top: 1116px;
+
+
+
+/* Rectangle 19 */
+
+position: absolute;
+width: 378px;
+height: 46px;
+left: 12px;
+top: 1116px;
+
+/* 按钮色 */
+background: linear-gradient(92.12deg, #6574FF 6.98%, #3923FF 100.39%);
+border-radius: 36px;
+
+
+/* 开启计划 */
+
+position: absolute;
+width: 60px;
+height: 18px;
+left: 171px;
+top: 1130px;
+
+font-family: 'Inter';
+font-style: normal;
+font-weight: 600;
+font-size: 15px;
+line-height: 18px;
+
+color: #FBFBFB;
+
+
+
+/* Group 81 */
+
+position: absolute;
+width: 345px;
+height: 48px;
+left: 27px;
+top: 580px;
+
+
+
+/* 早餐 */
+
+position: absolute;
+width: 47px;
+height: 22px;
+left: 50px;
+top: 580px;
+
+font-family: 'Inter';
+font-style: normal;
+font-weight: 700;
+font-size: 18px;
+line-height: 22px;
+/* identical to box height */
+
+color: #000000;
+
+
+
+/* 燕麦粥、冬枣、全脂纯牛奶 */
+
+position: absolute;
+width: 192px;
+height: 18px;
+left: 30px;
+top: 610px;
+
+font-family: 'Inter';
+font-style: normal;
+font-weight: 400;
+font-size: 15px;
+line-height: 18px;
+
+color: #7F88AA;
+
+
+
+/* 31%能量； 547kcal */
+
+position: absolute;
+width: 140px;
+height: 18px;
+left: 232px;
+top: 581px;
+
+font-family: 'Inter';
+font-style: normal;
+font-weight: 700;
+font-size: 15px;
+line-height: 18px;
+
+color: #4A4A4A;
+
+
+
+/* tdesign:apple-filled */
+
+position: absolute;
+width: 20px;
+height: 20px;
+left: 27px;
+top: 580px;
+
+
+
+/* Vector */
+
+box-sizing: border-box;
+
+position: absolute;
+left: 8.33%;
+right: 8.33%;
+top: 8.33%;
+bottom: 7.8%;
+
+border: 2px solid #FF8EDD;
+
+
+/* Group 79 */
+
+position: absolute;
+width: 343px;
+height: 48px;
+left: 27px;
+top: 718px;
+
+
+
+/* 晚餐 */
+
+position: absolute;
+width: 47px;
+height: 22px;
+left: 54px;
+top: 718px;
+
+font-family: 'Inter';
+font-style: normal;
+font-weight: 700;
+font-size: 18px;
+line-height: 22px;
+/* identical to box height */
+
+color: #000000;
+
+
+
+/* 香甜玉米饭、清水蒸鸡、凉拌莴笋丝 */
+
+position: absolute;
+width: 252px;
+height: 18px;
+left: 30px;
+top: 748px;
+
+font-family: 'Inter';
+font-style: normal;
+font-weight: 400;
+font-size: 15px;
+line-height: 18px;
+
+color: #7F88AA;
+
+
+
+/* 31%能量； 547kcal */
+
+position: absolute;
+width: 140px;
+height: 18px;
+left: 230px;
+top: 719px;
+
+font-family: 'Inter';
+font-style: normal;
+font-weight: 700;
+font-size: 15px;
+line-height: 18px;
+
+color: #4A4A4A;
+
+
+
+/* tdesign:bean-filled */
+
+position: absolute;
+width: 20px;
+height: 20px;
+left: 27px;
+top: 719px;
+
+
+
+/* Vector */
+
+box-sizing: border-box;
+
+position: absolute;
+left: 6.48%;
+right: 6.48%;
+top: 6.87%;
+bottom: 6.87%;
+
+border: 2px solid #41D6FF;
+
+
+/* Group 80 */
+
+position: absolute;
+width: 343px;
+height: 48px;
+left: 27px;
+top: 649px;
+
+
+
+/* 午餐 */
+
+position: absolute;
+width: 47px;
+height: 22px;
+left: 50px;
+top: 649px;
+
+font-family: 'Inter';
+font-style: normal;
+font-weight: 700;
+font-size: 18px;
+line-height: 22px;
+/* identical to box height */
+
+color: #000000;
+
+
+
+/* 五谷养生饭、浇汁豆腐、凉拌马齿菜 */
+
+position: absolute;
+width: 252px;
+height: 18px;
+left: 30px;
+top: 679px;
+
+font-family: 'Inter';
+font-style: normal;
+font-weight: 400;
+font-size: 15px;
+line-height: 18px;
+
+color: #7F88AA;
+
+
+
+/* 31%能量； 547kcal */
+
+position: absolute;
+width: 140px;
+height: 18px;
+left: 230px;
+top: 650px;
+
+font-family: 'Inter';
+font-style: normal;
+font-weight: 700;
+font-size: 15px;
+line-height: 18px;
+
+color: #4A4A4A;
+
+
+
+/* tdesign:broccoli-filled */
+
+position: absolute;
+width: 20px;
+height: 20px;
+left: 27px;
+top: 649px;
+
+
+
+/* Vector */
+
+box-sizing: border-box;
+
+position: absolute;
+left: 8.75%;
+right: 3.52%;
+top: 5.65%;
+bottom: 8.75%;
+
+border: 2px solid #4326FF;
+
+
+/* Rectangle 97 */
+
+position: absolute;
+width: 83px;
+height: 21px;
+left: 12px;
+top: 174px;
+
+background: rgba(211, 214, 255, 0.6);
+border-radius: 20px;
+
+
+/* material-symbols-light:assured-workload */
+
+position: absolute;
+width: 24px;
+height: 24px;
+left: 101px;
+top: 171px;
+
+
+
+/* Vector */
+
+position: absolute;
+height: 13px;
+left: 5.97%;
+right: 91.54%;
+top: calc(50% - 13px/2 - 407px);
+
+background: #4539FF;
+
+
+/* 90天计划 */
+
+position: absolute;
+width: 43px;
+height: 12px;
+left: 40px;
+top: 178px;
+
+font-family: 'Inter';
+font-style: normal;
+font-weight: 400;
+font-size: 10px;
+line-height: 12px;
+
+color: #6A77A7;
+
+
+
+/* Rectangle 98 */
+
+position: absolute;
+width: 112px;
+height: 21px;
+left: 104px;
+top: 174px;
+
+background: rgba(211, 214, 255, 0.6);
+border-radius: 20px;
+
+
+/* Vector */
+
+position: absolute;
+height: 13px;
+left: 27.86%;
+right: 69.65%;
+top: calc(50% - 13px/2 - 407px);
+
+background: #4539FF;
+
+
+/* 三甲医生定制计划 */
+
+position: absolute;
+width: 80px;
+height: 12px;
+left: 128px;
+top: 178px;
+
+font-family: 'Inter';
+font-style: normal;
+font-weight: 400;
+font-size: 10px;
+line-height: 12px;
+
+color: #6A77A7;
+
+
+
+/* IMG_0609 1 */
+
+position: absolute;
+width: 147px;
+height: 224px;
+left: 232px;
+top: 850px;
+
+background: url(.png);
+
+
+/* Group 82 */
+
+position: absolute;
+width: 240px;
+height: 207px;
+left: 30px;
+top: 871px;
+
+
+
+/* 有氧运动 */
+
+position: absolute;
+width: 85px;
+height: 22px;
+left: 30px;
+top: 871px;
+
+font-family: 'Inter';
+font-style: normal;
+font-weight: 700;
+font-size: 18px;
+line-height: 22px;
+/* identical to box height */
+
+color: #000000;
+
+
+
+/* 力量训练 */
+
+position: absolute;
+width: 85px;
+height: 22px;
+left: 30px;
+top: 984px;
+
+font-family: 'Inter';
+font-style: normal;
+font-weight: 700;
+font-size: 18px;
+line-height: 22px;
+/* identical to box height */
+
+color: #000000;
+
+
+
+/* 频次：每周5次 */
+
+position: absolute;
+width: 192px;
+height: 18px;
+left: 30px;
+top: 903px;
+
+font-family: 'Inter';
+font-style: normal;
+font-weight: 400;
+font-size: 15px;
+line-height: 18px;
+
+color: #7F88AA;
+
+
+
+/* 频次：每周5次 */
+
+position: absolute;
+width: 192px;
+height: 18px;
+left: 30px;
+top: 1016px;
+
+font-family: 'Inter';
+font-style: normal;
+font-weight: 400;
+font-size: 15px;
+line-height: 18px;
+
+color: #7F88AA;
+
+
+
+/* 时长：30-40分钟/次 */
+
+position: absolute;
+width: 148px;
+height: 18px;
+left: 30px;
+top: 923px;
+
+font-family: 'Inter';
+font-style: normal;
+font-weight: 400;
+font-size: 15px;
+line-height: 18px;
+
+color: #7F88AA;
+
+
+
+/* 时长：30-40分钟/次 */
+
+position: absolute;
+width: 148px;
+height: 18px;
+left: 30px;
+top: 1036px;
+
+font-family: 'Inter';
+font-style: normal;
+font-weight: 400;
+font-size: 15px;
+line-height: 18px;
+
+color: #7F88AA;
+
+
+
+/* 推荐：快走、慢跑、游泳、骑行 */
+
+position: absolute;
+width: 219px;
+height: 18px;
+left: 30px;
+top: 947px;
+
+font-family: 'Inter';
+font-style: normal;
+font-weight: 400;
+font-size: 15px;
+line-height: 18px;
+
+color: #7F88AA;
+
+
+
+/* 推荐：深蹲、平板支撑、哑铃训练 */
+
+position: absolute;
+width: 240px;
+height: 18px;
+left: 30px;
+top: 1060px;
+
+font-family: 'Inter';
+font-style: normal;
+font-weight: 400;
+font-size: 15px;
+line-height: 18px;
+
+color: #7F88AA;
+
+
+
+/* mingcute:edit-line */
+
+position: absolute;
+width: 20px;
+height: 20px;
+left: 289px;
+top: 431px;
+
+
+
+/* Group */
+
+position: absolute;
+left: 12.5%;
+right: 12.5%;
+top: 12.5%;
+bottom: 0.78%;
+
+
+
+/* Vector */
+
+position: absolute;
+left: 50.32%;
+right: 46.2%;
+top: 96.43%;
+bottom: 0.78%;
+
+background: #514FFF;
+
+
+/* Vector */
+
+position: absolute;
+left: 12.5%;
+right: 12.5%;
+top: 12.5%;
+bottom: 12.5%;
+
+background: #514FFF;

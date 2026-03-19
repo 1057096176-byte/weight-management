@@ -1,0 +1,264 @@
+@custom-variant dark (&:is(.dark *));
+
+:root {
+  /* ===== 严格设计变量 (Design Tokens) ===== */
+  
+  /* 品牌主色 (Primary) - 亮蓝色 */
+  --primary: #2B5BFF;
+  --primary-foreground: #FFFFFF;
+  --primary-hover: #1A4AEE;
+  
+  /* 辅助色 (Secondary) - 浅紫灰色 */
+  --secondary: #EAEBFF;
+  --secondary-foreground: #2B5BFF;
+  --secondary-hover: #D6D8FF;
+  
+  /* 背景色 - 极其柔和的渐变白 */
+  --background: #FAFAFF;
+  --card: #FFFFFF;
+  --popover: #FFFFFF;
+  
+  /* 文本颜色 */
+  --foreground: #1A1A1A;
+  --card-foreground: #1A1A1A;
+  --popover-foreground: #1A1A1A;
+  --text-primary: #1A1A1A;
+  --text-secondary: #8A8A93;
+  --text-highlight: #2B5BFF;
+  --text-placeholder: #8A8A93;
+  
+  /* 状态颜色 */
+  --status-success: #10B981;
+  --status-warning: #F59E0B;
+  --status-danger: #EF4444;
+  --destructive: #EF4444;
+  --destructive-foreground: #FFFFFF;
+  
+  /* 边框与分割线 */
+  --border: rgba(234, 235, 255, 0.8);
+  --divider: rgba(255, 255, 255, 0.5);
+  
+  /* 输入框 */
+  --input: transparent;
+  --input-background: #FFFFFF;
+  --input-border: rgba(234, 235, 255, 0.8);
+  --input-border-focus: #2B5BFF;
+  
+  /* 其他 */
+  --muted: #EAEBFF;
+  --muted-foreground: #8A8A93;
+  --accent: #EAEBFF;
+  --accent-foreground: #2B5BFF;
+  --switch-background: #EAEBFF;
+  --ring: #2B5BFF;
+  
+  /* 图表颜色 */
+  --chart-1: #2B5BFF;
+  --chart-2: #8B5CF6;
+  --chart-3: #10B981;
+  --chart-4: #F59E0B;
+  --chart-5: #EF4444;
+  
+  /* 圆角系统 */
+  --radius-tag: 4px;      /* 标签 */
+  --radius-bubble: 16px;  /* 常规气泡 */
+  --radius-card: 24px;    /* 核心大卡片 */
+  --radius: 16px;         /* 默认 */
+  
+  /* 间距系统 - 8pt 栅格 */
+  --spacing-xs: 8px;
+  --spacing-sm: 16px;
+  --spacing-md: 24px;
+  --spacing-lg: 32px;
+  
+  /* 投影系统 - 极其柔和 */
+  --shadow-soft: 0 4px 20px rgba(0, 0, 0, 0.05);
+  --shadow-card: 0 2px 12px rgba(0, 0, 0, 0.08);
+  --shadow-button: 0 2px 12px rgba(43, 91, 255, 0.25);
+  
+  /* 侧边栏 */
+  --sidebar: #FFFFFF;
+  --sidebar-foreground: #1A1A1A;
+  --sidebar-primary: #2B5BFF;
+  --sidebar-primary-foreground: #FFFFFF;
+  --sidebar-accent: #EAEBFF;
+  --sidebar-accent-foreground: #2B5BFF;
+  --sidebar-border: rgba(234, 235, 255, 0.8);
+  --sidebar-ring: #2B5BFF;
+  
+  /* 字体 */
+  --font-size: 16px;
+  --font-weight-medium: 500;
+  --font-weight-semibold: 600;
+  --font-weight-bold: 700;
+  --font-weight-normal: 400;
+}
+
+.dark {
+  /* 暗色模式保持原有设置，但暂不启用 */
+  --background: oklch(0.145 0 0);
+  --foreground: oklch(0.985 0 0);
+  --card: oklch(0.145 0 0);
+  --card-foreground: oklch(0.985 0 0);
+  --popover: oklch(0.145 0 0);
+  --popover-foreground: oklch(0.985 0 0);
+  --primary: oklch(0.985 0 0);
+  --primary-foreground: oklch(0.205 0 0);
+  --secondary: oklch(0.269 0 0);
+  --secondary-foreground: oklch(0.985 0 0);
+  --muted: oklch(0.269 0 0);
+  --muted-foreground: oklch(0.708 0 0);
+  --accent: oklch(0.269 0 0);
+  --accent-foreground: oklch(0.985 0 0);
+  --destructive: oklch(0.396 0.141 25.723);
+  --destructive-foreground: oklch(0.637 0.237 25.331);
+  --border: oklch(0.269 0 0);
+  --input: oklch(0.269 0 0);
+  --ring: oklch(0.439 0 0);
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-popover: var(--popover);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-destructive: var(--destructive);
+  --color-destructive-foreground: var(--destructive-foreground);
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --color-input-background: var(--input-background);
+  --color-switch-background: var(--switch-background);
+  --color-ring: var(--ring);
+  --color-chart-1: var(--chart-1);
+  --color-chart-2: var(--chart-2);
+  --color-chart-3: var(--chart-3);
+  --color-chart-4: var(--chart-4);
+  --color-chart-5: var(--chart-5);
+  --radius-sm: calc(var(--radius) - 4px);
+  --radius-md: calc(var(--radius) - 2px);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) + 4px);
+  --color-sidebar: var(--sidebar);
+  --color-sidebar-foreground: var(--sidebar-foreground);
+  --color-sidebar-primary: var(--sidebar-primary);
+  --color-sidebar-primary-foreground: var(--sidebar-primary-foreground);
+  --color-sidebar-accent: var(--sidebar-accent);
+  --color-sidebar-accent-foreground: var(--sidebar-accent-foreground);
+  --color-sidebar-border: var(--sidebar-border);
+  --color-sidebar-ring: var(--sidebar-ring);
+}
+
+@layer base {
+  * {
+    @apply border-border outline-ring/50;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+    /* 极其柔和的浅粉到浅紫的模糊渐变背景 */
+    background: linear-gradient(180deg, rgba(255, 240, 245, 0.3) 0%, rgba(245, 240, 255, 0.3) 100%);
+    background-color: #FAFAFF;
+  }
+
+  /**
+  * 默认排版样式
+  * 使用 @layer base，Tailwind 工具类会自动覆盖这些样式
+  */
+
+  html {
+    font-size: var(--font-size);
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  h1 {
+    font-size: 24px;
+    font-weight: var(--font-weight-semibold);
+    line-height: 1.4;
+    color: var(--text-primary);
+  }
+
+  h2 {
+    font-size: 20px;
+    font-weight: var(--font-weight-semibold);
+    line-height: 1.4;
+    color: var(--text-primary);
+  }
+
+  h3 {
+    font-size: 18px;
+    font-weight: var(--font-weight-semibold);
+    line-height: 1.4;
+    color: var(--text-primary);
+  }
+
+  h4 {
+    font-size: 16px;
+    font-weight: var(--font-weight-medium);
+    line-height: 1.5;
+    color: var(--text-primary);
+  }
+
+  p {
+    font-size: 14px;
+    font-weight: var(--font-weight-normal);
+    line-height: 1.6;
+    color: var(--text-primary);
+  }
+
+  label {
+    font-size: 14px;
+    font-weight: var(--font-weight-medium);
+    line-height: 1.5;
+    color: var(--text-primary);
+  }
+
+  button {
+    font-size: 14px;
+    font-weight: var(--font-weight-medium);
+    line-height: 1.5;
+  }
+
+  input, textarea {
+    font-size: 14px;
+    font-weight: var(--font-weight-normal);
+    line-height: 1.5;
+  }
+
+  /* 禁用文字阴影 */
+  * {
+    text-shadow: none !important;
+  }
+
+  /* 隐藏滚动条但保持滚动功能 */
+  * {
+    scrollbar-width: none; /* Firefox */
+    -ms-overflow-style: none; /* IE and Edge */
+  }
+
+  *::-webkit-scrollbar {
+    display: none; /* Chrome, Safari and Opera */
+  }
+
+  /* 脉冲动画 - 用于设备搜索和连接 */
+  @keyframes pulse {
+    0%, 100% {
+      opacity: 1;
+      transform: scale(1);
+    }
+    50% {
+      opacity: 0.6;
+      transform: scale(1.05);
+    }
+  }
+}

@@ -1,0 +1,212 @@
+/* Rectangle 11 */
+
+box-sizing: border-box;
+
+position: absolute;
+width: 378px;
+height: 305px;
+left: 12px;
+top: 171px;
+
+background: rgba(255, 255, 255, 0.5);
+border-radius: 16px;
+
+
+/* Rectangle 16 */
+
+position: absolute;
+width: 378px;
+height: 73px;
+left: 12px;
+top: 170px;
+
+background: #FFFFFF;
+border-radius: 16px;
+
+
+/* 杨*的减重定制化方案 */
+
+position: absolute;
+width: 153px;
+height: 19px;
+left: 47px;
+top: 187px;
+
+font-family: 'Inter';
+font-style: normal;
+font-weight: 600;
+font-size: 16px;
+line-height: 19px;
+
+color: #131142;
+
+
+
+/* 1.请选择你的性别 */
+
+position: absolute;
+width: 116px;
+height: 18px;
+left: 28px;
+top: 258px;
+
+font-family: 'Inter';
+font-style: normal;
+font-weight: 500;
+font-size: 15px;
+line-height: 18px;
+
+color: #131142;
+
+
+
+/* 请根据您的实际情况进行填写 */
+
+position: absolute;
+width: 169px;
+height: 16px;
+left: 45px;
+top: 210px;
+
+font-family: 'Inter';
+font-style: normal;
+font-weight: 400;
+font-size: 13px;
+line-height: 16px;
+/* identical to box height */
+
+color: #7F88AA;
+
+
+
+/* Vector */
+
+position: absolute;
+height: 14px;
+left: 6.97%;
+right: 89.55%;
+top: calc(50% - 14px/2 - 242px);
+
+background: #3267FF;
+
+
+/* Rectangle 17 */
+
+position: absolute;
+width: 341px;
+height: 46px;
+left: 30px;
+top: 284px;
+
+background: #FFFFFF;
+border-radius: 36px;
+
+
+/* Rectangle 18 */
+
+position: absolute;
+width: 341px;
+height: 46px;
+left: 30px;
+top: 347px;
+
+background: #FFFFFF;
+border-radius: 36px;
+
+
+/* 男 */
+
+position: absolute;
+width: 15px;
+height: 18px;
+left: 193px;
+top: 298px;
+
+font-family: 'Inter';
+font-style: normal;
+font-weight: 400;
+font-size: 15px;
+line-height: 18px;
+
+color: #131142;
+
+
+
+/* 女 */
+
+position: absolute;
+width: 15px;
+height: 18px;
+left: 193px;
+top: 361px;
+
+font-family: 'Inter';
+font-style: normal;
+font-weight: 400;
+font-size: 15px;
+line-height: 18px;
+
+color: #131142;
+
+
+
+/* Rectangle 19 */
+
+position: absolute;
+width: 341px;
+height: 46px;
+left: 30px;
+top: 408px;
+
+/* 按钮色 */
+background: linear-gradient(92.12deg, #6574FF 6.98%, #3923FF 100.39%);
+border-radius: 36px;
+
+
+/* 确认 */
+
+position: absolute;
+width: 30px;
+height: 18px;
+left: 186px;
+top: 422px;
+
+font-family: 'Inter';
+font-style: normal;
+font-weight: 600;
+font-size: 15px;
+line-height: 18px;
+
+color: #FFFFFF;
+
+
+
+/* Rectangle 91 */
+
+position: absolute;
+width: 38px;
+height: 20px;
+left: 331px;
+top: 183px;
+
+background: #EFF4FF;
+border-radius: 23px;
+
+
+/* 1/14 */
+
+position: absolute;
+width: 26px;
+height: 16px;
+left: 337px;
+top: 185px;
+
+font-family: 'Inter';
+font-style: normal;
+font-weight: 400;
+font-size: 13px;
+line-height: 16px;
+/* identical to box height */
+
+color: #397EFF;
+

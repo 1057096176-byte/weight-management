@@ -1,0 +1,606 @@
+/* Group 83 */
+
+position: absolute;
+width: 378px;
+height: 554px;
+left: 12px;
+top: 113px;
+
+
+
+/* Rectangle 5 */
+
+position: absolute;
+width: 378px;
+height: 554px;
+left: 12px;
+top: 113px;
+
+/* Linear
+
+卡片背景渐变
+*/
+background: linear-gradient(112.53deg, rgba(202, 215, 255, 0.8) -1.64%, rgba(41, 73, 255, 0.24) 97.1%);
+border-radius: 16px;
+
+
+/* 蔡立军医生已为您定专属方案： */
+
+position: absolute;
+width: 224px;
+height: 19px;
+left: 28px;
+top: 138px;
+
+font-family: 'Inter';
+font-style: normal;
+font-weight: 500;
+font-size: 16px;
+line-height: 19px;
+
+color: #344127;
+
+
+
+/* Rectangle 2 */
+
+box-sizing: border-box;
+
+position: absolute;
+width: 355px;
+height: 484px;
+left: 23px;
+top: 165px;
+
+background: linear-gradient(180deg, rgba(241, 245, 255, 0.8) 0%, #FFFFFF 100%);
+border: 1px solid #FFFFFF;
+border-radius: 13px;
+
+
+/* 68KG */
+
+position: absolute;
+width: 43px;
+height: 18px;
+left: 313px;
+top: 283px;
+
+font-family: 'Inter';
+font-style: normal;
+font-weight: 500;
+font-size: 15px;
+line-height: 18px;
+
+color: #000000;
+
+
+
+/* 30% */
+
+position: absolute;
+width: 33px;
+height: 18px;
+left: 323px;
+top: 386px;
+
+font-family: 'Inter';
+font-style: normal;
+font-weight: 500;
+font-size: 15px;
+line-height: 18px;
+
+color: #000000;
+
+
+
+/* 5次 */
+
+position: absolute;
+width: 33px;
+height: 18px;
+left: 323px;
+top: 508px;
+
+font-family: 'Inter';
+font-style: normal;
+font-weight: 500;
+font-size: 15px;
+line-height: 18px;
+
+color: #000000;
+
+
+
+/* 1000-1500kcal */
+
+position: absolute;
+width: 115px;
+height: 18px;
+left: 241px;
+top: 309px;
+
+font-family: 'Inter';
+font-style: normal;
+font-weight: 500;
+font-size: 15px;
+line-height: 18px;
+
+color: #000000;
+
+
+
+/* 40% */
+
+position: absolute;
+width: 33px;
+height: 18px;
+left: 323px;
+top: 412px;
+
+font-family: 'Inter';
+font-style: normal;
+font-weight: 500;
+font-size: 15px;
+line-height: 18px;
+
+color: #000000;
+
+
+
+/* 150-180分钟 */
+
+position: absolute;
+width: 91px;
+height: 18px;
+left: 265px;
+top: 534px;
+
+font-family: 'Inter';
+font-style: normal;
+font-weight: 500;
+font-size: 15px;
+line-height: 18px;
+
+color: #000000;
+
+
+
+/* 30% */
+
+position: absolute;
+width: 33px;
+height: 18px;
+left: 323px;
+top: 437px;
+
+font-family: 'Inter';
+font-style: normal;
+font-weight: 500;
+font-size: 15px;
+line-height: 18px;
+
+color: #000000;
+
+
+
+/* 能量与体重目标 */
+
+position: absolute;
+width: 106px;
+height: 18px;
+left: 41px;
+top: 257px;
+
+font-family: 'Inter';
+font-style: normal;
+font-weight: 600;
+font-size: 15px;
+line-height: 18px;
+
+color: #131142;
+
+
+
+/* 营养素分配 */
+
+position: absolute;
+width: 80px;
+height: 18px;
+left: 41px;
+top: 360px;
+
+font-family: 'Inter';
+font-style: normal;
+font-weight: 600;
+font-size: 15px;
+line-height: 18px;
+
+color: #131142;
+
+
+
+/* 运动计划 */
+
+position: absolute;
+width: 106px;
+height: 18px;
+left: 41px;
+top: 482px;
+
+font-family: 'Inter';
+font-style: normal;
+font-weight: 600;
+font-size: 15px;
+line-height: 18px;
+
+color: #131142;
+
+
+
+/* 目标体重 */
+
+position: absolute;
+width: 70px;
+height: 18px;
+left: 41px;
+top: 283px;
+
+font-family: 'Inter';
+font-style: normal;
+font-weight: 400;
+font-size: 15px;
+line-height: 18px;
+
+color: #7F88AA;
+
+
+
+/* 蛋白质 */
+
+position: absolute;
+width: 70px;
+height: 18px;
+left: 41px;
+top: 386px;
+
+font-family: 'Inter';
+font-style: normal;
+font-weight: 400;
+font-size: 15px;
+line-height: 18px;
+
+color: #7F88AA;
+
+
+
+/* 每周运动频次 */
+
+position: absolute;
+width: 98px;
+height: 18px;
+left: 41px;
+top: 508px;
+
+font-family: 'Inter';
+font-style: normal;
+font-weight: 400;
+font-size: 15px;
+line-height: 18px;
+
+color: #7F88AA;
+
+
+
+/* 每日目标 */
+
+position: absolute;
+width: 70px;
+height: 18px;
+left: 41px;
+top: 309px;
+
+font-family: 'Inter';
+font-style: normal;
+font-weight: 400;
+font-size: 15px;
+line-height: 18px;
+
+color: #7F88AA;
+
+
+
+/* 碳水化合物 */
+
+position: absolute;
+width: 88px;
+height: 18px;
+left: 41px;
+top: 412px;
+
+font-family: 'Inter';
+font-style: normal;
+font-weight: 400;
+font-size: 15px;
+line-height: 18px;
+
+color: #7F88AA;
+
+
+
+/* 每周运动时长 */
+
+position: absolute;
+width: 98px;
+height: 18px;
+left: 41px;
+top: 534px;
+
+font-family: 'Inter';
+font-style: normal;
+font-weight: 400;
+font-size: 15px;
+line-height: 18px;
+
+color: #7F88AA;
+
+
+
+/* 脂肪 */
+
+position: absolute;
+width: 34px;
+height: 18px;
+left: 41px;
+top: 438px;
+
+font-family: 'Inter';
+font-style: normal;
+font-weight: 400;
+font-size: 15px;
+line-height: 18px;
+
+color: #7F88AA;
+
+
+
+/* 轻盈计划 */
+
+position: absolute;
+width: 90px;
+height: 26px;
+left: 40px;
+top: 188px;
+
+font-family: 'Inter';
+font-style: normal;
+font-weight: 700;
+font-size: 20px;
+line-height: 26px;
+/* identical to box height, or 130% */
+
+color: #131142;
+
+
+
+/* 定制化体重管理方案· 预计3个月达成目标 */
+
+position: absolute;
+width: 240px;
+height: 18px;
+left: 40px;
+top: 217px;
+
+font-family: 'PingFang SC';
+font-style: normal;
+font-weight: 400;
+font-size: 13px;
+line-height: 18px;
+
+color: #7F88AA;
+
+
+
+/* Group 25 */
+
+position: absolute;
+width: 74px;
+height: 24px;
+left: 129px;
+top: 187px;
+
+
+
+/* Rectangle 18 */
+
+box-sizing: border-box;
+
+position: absolute;
+width: 74px;
+height: 24px;
+left: 129px;
+top: 187px;
+
+opacity: 0.4;
+border: 1px solid #6BC25F;
+border-radius: 6px;
+
+
+/* 轻量级干预 */
+
+position: absolute;
+width: 55px;
+height: 12px;
+left: 139px;
+top: 193px;
+
+font-family: 'PingFang SC';
+font-style: normal;
+font-weight: 400;
+font-size: 11px;
+line-height: 12px;
+/* identical to box height, or 109% */
+
+color: #81B642;
+
+
+
+/* Group 73 */
+
+position: absolute;
+width: 88px;
+height: 24px;
+left: 268px;
+top: 477px;
+
+
+
+/* Rectangle 18 */
+
+box-sizing: border-box;
+
+position: absolute;
+width: 41px;
+height: 24px;
+left: 268px;
+top: 477px;
+
+opacity: 0.4;
+border: 1px solid #37C8BE;
+border-radius: 6px;
+
+
+/* Rectangle 19 */
+
+box-sizing: border-box;
+
+position: absolute;
+width: 41px;
+height: 24px;
+left: 315px;
+top: 477px;
+
+opacity: 0.4;
+border: 1px solid #6472FF;
+border-radius: 6px;
+
+
+/* 有氧 */
+
+position: absolute;
+width: 22px;
+height: 12px;
+left: 278px;
+top: 483px;
+
+font-family: 'PingFang SC';
+font-style: normal;
+font-weight: 400;
+font-size: 11px;
+line-height: 12px;
+/* identical to box height, or 109% */
+
+color: #37C8BE;
+
+
+
+/* 力量 */
+
+position: absolute;
+width: 22px;
+height: 12px;
+left: 325px;
+top: 483px;
+
+font-family: 'PingFang SC';
+font-style: normal;
+font-weight: 400;
+font-size: 11px;
+line-height: 12px;
+/* identical to box height, or 109% */
+
+color: #6472FF;
+
+
+
+/* Group 72 */
+
+position: absolute;
+width: 306px;
+height: 46px;
+left: 45px;
+top: 580px;
+
+
+
+/* Rectangle 19 */
+
+position: absolute;
+width: 306px;
+height: 46px;
+left: 45px;
+top: 580px;
+
+/* 按钮色 */
+background: linear-gradient(92.12deg, #6574FF 6.98%, #3923FF 100.39%);
+border-radius: 36px;
+
+
+/* 查看完整方案开启计划 */
+
+position: absolute;
+width: 150px;
+height: 18px;
+left: 116px;
+top: 594px;
+
+font-family: 'Inter';
+font-style: normal;
+font-weight: 600;
+font-size: 15px;
+line-height: 18px;
+
+color: #FBFBFB;
+
+
+
+/* Line 3 */
+
+position: absolute;
+width: 315px;
+height: 0px;
+left: 41px;
+top: 342px;
+
+border: 1px solid #C5D1F8;
+
+
+/* Line 4 */
+
+position: absolute;
+width: 315px;
+height: 0px;
+left: 43px;
+top: 464px;
+
+border: 1px solid #C5D1F8;
+
+
+/* Line 5 */
+
+position: absolute;
+width: 315px;
+height: 0px;
+left: 43px;
+top: 464px;
+
+border: 1px solid #C5D1F8;
+
+
+/* openmoji:return */
+
+position: absolute;
+width: 18px;
+height: 18px;
+left: 139px;
+top: 136px;
+
