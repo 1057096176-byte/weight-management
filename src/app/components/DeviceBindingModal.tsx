@@ -113,16 +113,15 @@ export function DeviceBindingModal({ isOpen, onClose, onBindSuccess }: DeviceBin
                     style={{
                       width: "100px",
                       height: "100px",
-                      background: "linear-gradient(135deg, #FF2400 0%, #E60012 100%)",
+                      background: "#CF0921",
                       borderRadius: "24px",
                       marginBottom: "24px"
                     }}
                   >
-                    <svg viewBox="0 0 120 90" className="w-16 h-16" fill="white">
-                      <path d="M60 10C60 10 45 25 45 40C45 55 60 70 60 70C60 70 75 55 75 40C75 25 60 10 60 10Z"/>
-                      <circle cx="35" cy="45" r="8"/>
-                      <circle cx="85" cy="45" r="8"/>
-                      <path d="M43 55L60 75L77 55" strokeWidth="0"/>
+                    <svg viewBox="0 0 89.6 80.8" className="w-16 h-16" fill="white">
+                      <path d="M44.8 0C44.8 0 35.8 16 22.4 16C9 16 0 0 0 0V26.8C0 40.4 11.2 52 25.2 52C39.2 52 44.8 40.4 44.8 26.8V0Z"/>
+                      <path d="M44.8 0C44.8 0 35.8 16 22.4 16C9 16 0 0 0 0V26.8C0 40.4 11.2 52 25.2 52C39.2 52 44.8 40.4 44.8 26.8V0Z" transform="translate(44.8 28.8)"/>
+                      <ellipse cx="44.8" cy="58.4" rx="44.8" ry="22.4"/>
                     </svg>
                   </div>
 
