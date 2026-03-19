@@ -124,7 +124,7 @@ export function UserInfoFormCard({ onSubmit, time }: UserInfoFormCardProps) {
           border: "1.5px solid rgba(43, 91, 255, 0.15)",
           padding: "24px",
           borderRadius: "0 16px 16px 16px",
-          maxWidth: "600px",
+          maxWidth: "800px",
           width: "100%",
         }}
       >
