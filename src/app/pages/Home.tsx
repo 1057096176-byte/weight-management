@@ -142,6 +142,12 @@ export default function Home() {
   
   // 计划是否已开启状态
   const [isPlanActivated, setIsPlanActivated] = useState(false);
+  const [aiMode, setAiMode] = useState<"fast" | "expert" | "predict">("fast");
+  const aiModeRef = useRef<"fast" | "expert" | "predict">("fast");
+  const handleModeChange = (mode: "fast" | "expert" | "predict") => {
+    setAiMode(mode);
+    aiModeRef.current = mode;
+  };
   
   // 用户健康数据（使用状态管理以支持编辑）
   const [healthData, setHealthData] = useState({
@@ -197,6 +203,85 @@ export default function Home() {
           : msg
       )
     );
+  };
+
+  const generateFastReply = (message: string): string => {
+    if (message.includes("减重") || message.includes("减肥") || message.includes("体重")) {
+      return "减重这件事，咱们一步一步来，不用太着急 😊\n\n最简单有效的方法：\n• 每天少吃一点，比如少半碗饭\n• 饭后散步20分钟，坚持比强度更重要\n• 睡够7-8小时，睡眠不足真的会让人变胖\n\n你现在大概每天吃多少？我帮你看看从哪里入手比较容易～";
+    }
+    if (message.includes("饮食") || message.includes("吃什么") || message.includes("食谱") || message.includes("营养")) {
+      return "吃对了真的很重要！给你一个简单好记的原则 🥗\n\n**每餐这样搭配：**\n• 半盘蔬菜（各种颜色都要有）\n• 四分之一蛋白质（鸡蛋、鱼、豆腐都行）\n• 四分之一主食（尽量选糙米或杂粮）\n\n不用刻意节食，吃饱很重要，只是换一下食物比例就好。你平时早餐一般吃什么？";
+    }
+    if (message.includes("运动") || message.includes("跑步") || message.includes("健身") || message.includes("锻炼") || message.includes("游泳") || message.includes("瑜伽")) {
+      return "太好了，动起来就是最棒的！💪\n\n运动不用很猛，关键是坚持：\n• 每天30分钟快走，效果就很不错\n• 运动前热身5分钟，保护膝盖\n• 运动后补点水，别马上吃东西\n\n你现在大概多久运动一次？我帮你看看怎么安排更合适～";
+    }
+    if (message.includes("早餐") || message.includes("午餐") || message.includes("晚餐") || message.includes("吃了") || message.includes("食物") || message.match(/\d+.*卡/)) {
+      return `记录下来了！养成记录饮食的习惯真的很有用 ✅\n\n整体来看还不错，小建议：\n• 记得多喝水，每天至少1500ml\n• 蔬菜可以再多一点\n• 吃饭别太快，细嚼慢咽更容易有饱腹感\n\n要去打卡中心记录详细数据吗？系统会帮你算热量 😊`;
+    }
+    if (message.includes("睡眠") || message.includes("作息") || message.includes("睡觉") || message.includes("失眠")) {
+      return "睡眠对减重的影响比很多人想象的大！😴\n\n睡不好会让身体分泌更多饥饿素，让你更想吃东西。\n\n几个小技巧：\n• 尽量固定时间睡觉和起床\n• 睡前1小时不看手机\n• 睡前可以喝杯温牛奶\n\n你最近睡眠怎么样？";
+    }
+    return "收到你的消息啦！😊 我是你的体重管理助手，可以帮你解答饮食、运动、减重相关的问题。\n\n有什么想聊的，直接说吧～";
+  };
+
+  const generateExpertReply = (message: string): { message: string; citations: string[] } => {
+    if (message.includes("减重") || message.includes("减肥") || message.includes("体重")) {
+      return {
+        message: "根据现有临床研究，能量负平衡是体重管理的核心机制。每减少 7700 kcal 的累积热量差约对应 1 kg 脂肪的消耗（Wishnofsky 公式）。\n\n**推荐干预策略：**\n1. 热量限制：在基础代谢率（BMR）基础上设置 500–750 kcal/d 缺口，避免超过 1000 kcal/d 以防肌肉流失\n2. 蛋白质摄入：维持 1.2–1.6 g/kg·d 以保护瘦体重（LBM），参考 ISSN 2017 立场声明\n3. 运动方案：有氧运动（MICT）结合抗阻训练（RT）优于单一模式，建议 ≥150 min/w 中等强度有氧 + 2次/w 力量训练\n4. 行为干预：饮食日记记录可提升依从性约 43%（Burke et al., 2011）",
+        citations: [
+          "Wishnofsky M. Caloric equivalents of gained or lost weight. Am J Clin Nutr. 1958",
+          "Stokes T, et al. Recent Perspectives Regarding the Role of Dietary Protein. Nutrients. 2018",
+          "Burke LE, et al. Self-monitoring in weight loss. J Am Diet Assoc. 2011",
+        ],
+      };
+    }
+    if (message.includes("饮食") || message.includes("吃什么") || message.includes("食谱") || message.includes("营养")) {
+      return {
+        message: "基于循证营养学，以下饮食模式在体重管理中具有较强证据支持：\n\n**地中海饮食（Mediterranean Diet）**\n以全谷物、蔬菜、橄榄油、鱼类为主，荟萃分析显示可显著降低 BMI 及腰围（Esposito et al., 2011）\n\n**宏量营养素分配建议（基于 DRI）：**\n- 碳水化合物：占总能量 45–60%，优先选择低 GI 食物\n- 蛋白质：占总能量 15–25%，分散于每餐（每餐 ≥20 g）\n- 脂肪：占总能量 20–35%，饱和脂肪 <10%\n\n**需避免：**超加工食品（UPF）摄入与体重增加呈显著正相关（NOVA 分类系统，Monteiro et al.）",
+        citations: [
+          "Esposito K, et al. Mediterranean diet and weight loss. Metab Syndr Relat Disord. 2011",
+          "Institute of Medicine. Dietary Reference Intakes for Energy. 2005",
+          "Monteiro CA, et al. Ultra-processed foods: what they are and how to identify them. Public Health Nutr. 2019",
+        ],
+      };
+    }
+    if (message.includes("运动") || message.includes("锻炼") || message.includes("健身")) {
+      return {
+        message: "运动处方应遵循 FITT-VP 原则（频率、强度、时间、类型、总量、进阶）进行个体化设计。\n\n**循证推荐（ACSM 2022 指南）：**\n- 有氧运动：150–300 min/w 中等强度（55–70% HRmax）或 75–150 min/w 高强度（70–85% HRmax）\n- 抗阻训练：每周 2–3 次，覆盖主要肌群，8–12 次/组，2–4 组，组间休息 60–90 s\n- HIIT：可在较短时间内获得等效代谢适应，适合时间有限者\n\n**体重管理特别说明：**单纯有氧运动的减重效果受代偿机制限制，建议结合饮食干预以实现持续负能量平衡（Swift et al., 2018）",
+        citations: [
+          "ACSM's Guidelines for Exercise Testing and Prescription. 11th Ed. 2022",
+          "Swift DL, et al. The Role of Exercise and Physical Activity in Weight Loss. Prog Cardiovasc Dis. 2018",
+        ],
+      };
+    }
+    if (message.includes("早餐") || message.includes("午餐") || message.includes("晚餐") || message.includes("吃了") || message.includes("食物") || message.match(/\d+.*卡/)) {
+      return {
+        message: "饮食记录是体重管理中依从性最强的行为干预手段之一。研究显示，坚持饮食日记可使减重效果提升约 43%（Burke et al., 2011）。\n\n**膳食质量评估维度：**\n- 能量密度：优先选择低能量密度食物（蔬菜、全谷物），有助于在控制热量的同时维持饱腹感\n- 血糖负荷（GL）：低 GL 饮食可改善胰岛素敏感性，减少脂肪储存\n- 蛋白质分布：建议每餐摄入 ≥20 g 优质蛋白，以最大化肌肉蛋白合成（MPS）\n\n建议在打卡中心完整记录食物种类与份量，系统将基于 DRI 标准进行宏量营养素分析。",
+        citations: [
+          "Burke LE, et al. Self-monitoring in weight loss: a systematic review. J Am Diet Assoc. 2011",
+          "Rolls BJ. The relationship between dietary energy density and energy intake. Physiol Behav. 2009",
+          "Moore DR, et al. Protein ingestion to stimulate myofibrillar protein synthesis. J Nutr. 2009",
+        ],
+      };
+    }
+    if (message.includes("睡眠") || message.includes("作息") || message.includes("睡觉") || message.includes("失眠")) {
+      return {
+        message: "睡眠不足是体重管理中常被忽视的独立风险因素。睡眠时间 <7 h/d 与 BMI 升高、腹型肥胖显著相关（Cappuccio et al., 2008）。\n\n**睡眠影响体重的核心机制：**\n1. 激素失调：睡眠剥夺导致瘦素（Leptin）↓、饥饿素（Ghrelin）↑，增加食欲约 24%\n2. 胰岛素抵抗：慢性睡眠不足可在 1 周内诱发胰岛素敏感性下降\n3. 皮质醇升高：促进内脏脂肪堆积\n\n**循证睡眠卫生建议（CBT-I 核心原则）：**\n- 固定起床时间（±30 min），优先于固定入睡时间\n- 睡前 2 h 避免蓝光暴露（屏幕）\n- 卧室温度维持 18–20°C 有助于核心体温下降，促进入睡",
+        citations: [
+          "Cappuccio FP, et al. Meta-analysis of short sleep duration and obesity. Sleep. 2008",
+          "Spiegel K, et al. Sleep curtailment in healthy young men is associated with decreased leptin levels. Ann Intern Med. 2004",
+          "Morin CM, et al. Cognitive behavioral therapy for insomnia. Sleep Med Rev. 2006",
+        ],
+      };
+    }
+    // 默认专家回复
+    return {
+      message: "根据当前健康管理领域的循证医学证据，您的问题涉及多维度的生理与行为因素。建议结合个人基础代谢、体成分数据及生活方式进行综合评估，以制定精准化干预方案。\n\n如需进一步分析，建议提供：BMI、腰臀比（WHR）、空腹血糖及近期运动记录，以便生成个性化健康建议。",
+      citations: [
+        "WHO. Obesity and Overweight Fact Sheet. 2024",
+        "中国超重/肥胖医学营养治疗指南（2021年）",
+      ],
+    };
   };
 
   const handleSendMessage = (message: string, image?: File) => {
@@ -395,30 +480,61 @@ export default function Home() {
         showQuickAccessCard = true;
         quickAccessType = 'doctor';
       }
-      // 检测是否为打卡相关内容
-      else if (message.includes("早餐") || message.includes("午餐") || message.includes("晚餐") || 
+      // 检测打卡相关内容（仅设置卡片标志，回复由模式函数生成）
+      else if (message.includes("早餐") || message.includes("午餐") || message.includes("晚餐") ||
           message.includes("吃了") || message.includes("食物") || message.match(/\d+.*卡/)) {
-        replyMessage = `✅ 已记录您的饮食信息！\n\n根据您的描述：\n"${message}"\n\n建议：\n• 记得搭配足够的蔬菜和蛋白质\n• 控制油脂摄入\n• 保持饮水充足\n\n💡 建议您前往打卡中心完善详细信息，系统会为您进行营养分析和热量计算。`;
         showCheckinCard = true;
-      } else if (message.includes("运动") || message.includes("跑步") || message.includes("健身") || 
+      } else if (message.includes("运动") || message.includes("跑步") || message.includes("健身") ||
                  message.includes("锻炼") || message.includes("游泳") || message.includes("瑜伽")) {
-        replyMessage = `💪 太棒了！坚持运动是健康生活的关键！\n\n根据您的描述：\n"${message}"\n\n运动建议：\n• 运动前做好热身\n• 运动后及时补充水分\n• 注意循序渐进，避过度疲劳\n\n💡 建议您前往打卡中心记录运动详情，系统会为您计算消耗的卡路里。`;
         showCheckinCard = true;
       }
-      // 关键词匹配回复
-      else if (message.includes("减重") || message.includes("减肥")) {
-        replyMessage = "科学减重需要合理控制饮食和适量运动的结合。\n\n建议您：\n1️⃣ 每天控制热量摄入在1500-1800千卡\n2️⃣ 每周进行150分钟中等强度有氧运动\n3⃣ 保证充足睡眠和规律作息\n\n需要我为您制定详细的减重方案吗？";
-      } else if (message.includes("饮食") || message.includes("吃什么") || message.includes("食谱")) {
-        replyMessage = "康饮食建议：\n\n🥗 多吃：\n• 新鲜蔬菜水果\n• 全谷物（糙米、燕麦）\n• 优质蛋白（肉、鸡胸肉）\n\n🚫 少吃：\n• 高糖食物和饮料\n• 油食品\n• 加工肉制品\n\n需要查看详细的每日饮食方案吗？";
+
+      // 根据模式生成回复
+      const currentMode = aiModeRef.current;
+      const isExpert = currentMode === "expert";
+      let finalMessage = replyMessage;
+      let citations: string[] | undefined;
+
+      // 预测模式
+      if (currentMode === "predict" && !showQuickAccessCard) {
+        if (message.includes("手术")) {
+          setMessages((prev) => [...prev, {
+            id: (Date.now() + 1).toString(),
+            message: "",
+            isUser: false,
+            time: new Date().toLocaleTimeString("zh-CN", { hour: "2-digit", minute: "2-digit" }),
+            ...generateSurgeryPredictMessage(),
+          }]);
+        } else {
+          setMessages((prev) => [...prev, {
+            id: (Date.now() + 1).toString(),
+            message: "目前仅支持手术效果预测，其他预测功能正在开发中，敬请期待 🔬",
+            isUser: false,
+            time: new Date().toLocaleTimeString("zh-CN", { hour: "2-digit", minute: "2-digit" }),
+          }]);
+        }
+        return;
       }
-      
+
+      if (!showQuickAccessCard) {
+        if (isExpert) {
+          const r = generateExpertReply(message);
+          finalMessage = r.message;
+          citations = r.citations;
+        } else {
+          finalMessage = generateFastReply(message);
+        }
+      }
+
       setMessages((prev) => [
         ...prev,
         {
           id: (Date.now() + 1).toString(),
-          message: replyMessage,
+          message: finalMessage,
           isUser: false,
           time: new Date().toLocaleTimeString("zh-CN", { hour: "2-digit", minute: "2-digit" }),
+          isExpertMode: isExpert,
+          citations,
         },
       ]);
 
@@ -504,20 +620,68 @@ export default function Home() {
     }, 1000);
   };
 
+  const generateSurgeryPredictMessage = () => {
+    const { height, currentWeight, bmi } = healthData;
+    const hasData = height > 0 && currentWeight > 0;
+    if (hasData) {
+      const idealWeight = (height / 100) * (height / 100) * 24;
+      const ewl = currentWeight - idealWeight;
+      const loss1y = Math.round(ewl * 0.68);
+      return {
+        isSurgeryPredictCard: true,
+        surgeryPredictData: {
+          height, currentWeight, bmi,
+          weight3m: Math.round(currentWeight - ewl * 0.35),
+          weight6m: Math.round(currentWeight - ewl * 0.55),
+          weight1y: Math.round(currentWeight - loss1y),
+          loss1y, diabetesRate: 65, bpRate: 72, lipidRate: 63,
+        },
+      };
+    }
+    return { message: "请告诉我您的基本信息，我来为您生成预测报告：\n\n1️⃣ 当前体重和身高是多少？\n2️⃣ 是否有糖尿病、高血压或高血脂？\n3️⃣ 考虑哪种手术方式（袖状胃切除 / 胃旁路）？" };
+  };
+
   const handleQuickQuestion = (question: string) => {
-    console.log("handleQuickQuestion called with:", question);
-    // 添加用户消息
-    console.log("Adding user message:", question);
-    setMessages(prev => [...prev, { id: Date.now().toString(), message: question, isUser: true, timestamp: new Date() }]);
-    
-    // 模拟 AI 回复
+    setMessages(prev => [...prev, { id: Date.now().toString(), message: question, isUser: true, time: new Date().toLocaleTimeString("zh-CN", { hour: "2-digit", minute: "2-digit" }) }]);
+
     setTimeout(() => {
-      console.log("AI replying to:", question);
-      setMessages(prev => [...prev, { 
-        id: (Date.now() + 1).toString(), 
-        message: getAIResponse(question), 
-        isUser: false, 
-        timestamp: new Date() 
+      const mode = aiModeRef.current;
+      if (mode === "predict") {
+        if (question.includes("手术")) {
+          setMessages(prev => [...prev, {
+            id: (Date.now() + 1).toString(),
+            message: "",
+            isUser: false,
+            time: new Date().toLocaleTimeString("zh-CN", { hour: "2-digit", minute: "2-digit" }),
+            ...generateSurgeryPredictMessage(),
+          }]);
+        } else {
+          setMessages(prev => [...prev, {
+            id: (Date.now() + 1).toString(),
+            message: "目前仅支持手术效果预测，其他预测功能正在开发中，敬请期待 🔬",
+            isUser: false,
+            time: new Date().toLocaleTimeString("zh-CN", { hour: "2-digit", minute: "2-digit" }),
+          }]);
+        }
+        return;
+      }
+      const isExpert = mode === "expert";
+      let finalMessage: string;
+      let citations: string[] | undefined;
+      if (isExpert) {
+        const r = generateExpertReply(question);
+        finalMessage = r.message;
+        citations = r.citations;
+      } else {
+        finalMessage = generateFastReply(question);
+      }
+      setMessages(prev => [...prev, {
+        id: (Date.now() + 1).toString(),
+        message: finalMessage,
+        isUser: false,
+        time: new Date().toLocaleTimeString("zh-CN", { hour: "2-digit", minute: "2-digit" }),
+        isExpertMode: isExpert,
+        citations,
       }]);
     }, 1000);
   };
@@ -1258,7 +1422,7 @@ export default function Home() {
             isUser: true,
             time: new Date().toLocaleTimeString("zh-CN", { hour: "2-digit", minute: "2-digit" })
           }]);
-          
+
           setTimeout(() => {
             setMessages(prev => [...prev, {
               id: (Date.now() + 1).toString(),
@@ -1269,12 +1433,30 @@ export default function Home() {
             }]);
           }, 800);
         }}
+        onAppointmentClick={() => {
+          setMessages(prev => [...prev, {
+            id: Date.now().toString(),
+            message: "预约挂号",
+            isUser: true,
+            time: new Date().toLocaleTimeString("zh-CN", { hour: "2-digit", minute: "2-digit" })
+          }]);
+          setTimeout(() => {
+            setMessages(prev => [...prev, {
+              id: (Date.now() + 1).toString(),
+              message: "",
+              isUser: false,
+              time: new Date().toLocaleTimeString("zh-CN", { hour: "2-digit", minute: "2-digit" }),
+              isHospitalCard: true,
+            }]);
+          }, 800);
+        }}
+        onModeChange={handleModeChange}
       />
 
       {/* 底部输框 */}
       <ChatInput
         onSend={handleSendMessage}
-        placeholder="有什么我可以帮您的吗？"
+        placeholder="发消息或按住说话..."
         showImageUpload={true}
       />
 
