@@ -94,9 +94,7 @@ export function SurgeryInfoCard({ onSubmit }: SurgeryInfoCardProps) {
                       border: "none",
                       cursor: submitted ? "default" : "pointer",
                       background: active
-                        ? val
-                          ? "linear-gradient(135deg, #FF6B6B 0%, #FF8E53 100%)"
-                          : "linear-gradient(135deg, #2B5BFF 0%, #6B8FFF 100%)"
+                        ? "linear-gradient(135deg, #2B5BFF 0%, #6B8FFF 100%)"
                         : "#EAEBFF",
                       color: active ? "#fff" : "#8A8A93",
                       transition: "all 0.2s",
