@@ -873,21 +873,69 @@ export default function Profile() {
 
                 {privacyContent === "agreement" && (
                   <>
-                    <div>
-                      <h4 style={{ fontWeight: 600, color: "#1A1A1A", marginBottom: "8px" }}>用户协议</h4>
-                      <p style={{ marginBottom: "12px" }}>更新日期：2026年2月27日</p>
-                      <div style={{ display: "flex", flexDirection: "column", gap: "12px" }}>
-                        <div>
-                          <h5 style={{ fontSize: "14px", fontWeight: 500, color: "#1A1A1A", marginBottom: "4px" }}>1. 服务说明</h5>
-                          <p>本应用提供健康管理、智能导诊、医生问诊等服务。使用本服务即表示您同意遵守本协议。</p>
-                        </div>
-                        <div>
-                          <h5 style={{ fontSize: "14px", fontWeight: 500, color: "#1A1A1A", marginBottom: "4px" }}>2. 用户责任</h5>
-                          <p>用户应确保提供的健康信息真实准确。本应用不对用户自主决策的健康行为负责。</p>
-                        </div>
-                        <div>
-                          <h5 style={{ fontSize: "14px", fontWeight: 500, color: "#1A1A1A", marginBottom: "4px" }}>3. 免责声明</h5>
-                          <p>本应用提供的建议仅供参考，不能替代专业医疗意见。如有严重健康问题，请及时就医。</p>
+                    <div style={{ display: "flex", flexDirection: "column", gap: "16px" }}>
+                      <p style={{ color: "#8A8A93", fontSize: "12px", margin: 0 }}>版本更新日期：2025年7月30日 &nbsp;|&nbsp; 版本生效日期：2025年7月20日</p>
+                      <p style={{ margin: 0 }}>欢迎您使用体重管理平台（"我们"）的产品和服务，您在访问我们的平台、使用我们的产品和服务时，我们可能会收集和使用您的相关信息，我们知道任何用户的个人信息安全都是至关重要的，我们将重点关注并竭力保护好您的个人信息隐私的安全。</p>
+                      <p style={{ margin: 0 }}>本隐私政策适用于您对体重管理平台的访问以及平台所提供的全部产品和服务的使用而提供或留存的信息，我们希望通过本隐私政策向您说明我们在您访问我们的平台、使用我们的产品和服务时是如何收集、使用、保存、共享和转让这些信息，以及我们将为您提供查询、更新、删除、保护以及注销这些信息的方式。</p>
+                      <p style={{ margin: 0 }}>体重管理平台是指由【杭州易智体科技有限公司】享有所有权和运营权的移动应用【体重管理平台小程序】等平台的统称。</p>
+                      <div style={{ backgroundColor: "#FFF8E1", borderRadius: "8px", padding: "12px" }}>
+                        <p style={{ fontWeight: 600, color: "#1A1A1A", margin: "0 0 6px 0" }}>【重要提醒】</p>
+                        <p style={{ margin: 0 }}>本次更新我们主要是进一步明确我们产品和服务收集、使用及共享个人信息的类型、方式和用途等，进一步明确关于您查询、更正和删除个人信息的方式，以及账户注销申请的方式等。</p>
+                      </div>
+                      <p style={{ margin: 0 }}>请您在继续使用体重管理平台产品或服务前务必认真仔细阅读并确认充分理解本隐私政策全部规则和要点，一旦您选择使用或在我们更新本隐私政策后继续使用我们的产品和服务，即视为您同意本隐私政策（含更新版本）的全部内容。</p>
+                      <div>
+                        <h5 style={{ fontSize: "14px", fontWeight: 600, color: "#1A1A1A", marginBottom: "6px" }}>本隐私政策帮助您了解以下内容：</h5>
+                        <p style={{ margin: 0, whiteSpace: "pre-line" }}>{"1. 我们如何收集和使用您的个人信息\n2. 我们如何使用 Cookie 和其他追踪技术\n3. 我们如何共享、转让、公开披露您的个人信息\n4. 我们如何存储保存和保护您的个人信息\n5. 您的权利\n6. 我们如何处理未成年人的个人信息\n7. 如何更新本政策\n8. 如何联系我们\n9. 争议解决\n10. 定义和名词解释"}</p>
+                      </div>
+                      <div>
+                        <h5 style={{ fontSize: "14px", fontWeight: 600, color: "#1A1A1A", marginBottom: "6px" }}>一、我们如何收集和使用您的个人信息</h5>
+                        <p style={{ margin: "0 0 8px 0" }}>个人信息是指以电子或者其他方式记录的能够单独或者与其他信息，结合识别特定自然人身份或者反映特定自然人活动情况的各种信息。</p>
+                        <p style={{ margin: "0 0 8px 0" }}>我们根据《中华人民共和国网络安全法》和《信息安全技术个人信息安全规范》（GB/T 35273-2017）以及其它相关法律法规的要求，并严格遵循正当、合法、必要的原则，出于您访问我们的平台、使用我们提供的服务和/或产品等过程中而收集和使用您的个人信息。</p>
+                        <p style={{ fontWeight: 600, color: "#1A1A1A", margin: "0 0 4px 0" }}>（一）帮助您成为我们的在线注册用户</p>
+                        <p style={{ margin: "0 0 4px 0" }}><strong>账户注册：</strong>为接受体重管理平台全面的服务，您应首先注册一个用户账号，为完成创建账号，您需至少提供账户名、密码、您本人的电话号码（用于身份验证）或电子邮箱地址。</p>
+                        <p style={{ margin: "0 0 4px 0" }}><strong>第三方登录：</strong>如您通过微信等第三方平台授权登陆的，我们仍然需要绑定您的电话号码，通过电话号码来验证您的身份是否有效。</p>
+                        <p style={{ margin: "0 0 8px 0" }}><strong>账户信息完善：</strong>您账号注册成功后，您可以补充您的昵称、性别、生日、兴趣爱好以及您实名验证的相关信息。</p>
+                        <p style={{ fontWeight: 600, color: "#1A1A1A", margin: "0 0 4px 0" }}>（二）向您提供产品和服务</p>
+                        <p style={{ margin: "0 0 4px 0" }}><strong>信息展示和搜索：</strong>体重管理平台提供丰富的健康相关的信息，包含文章、课程等。在您进行信息浏览时，我们可能会收集您的设备信息，包括设备名称、设备型号、唯一设备识别码、操作系统版本等。</p>
+                        <p style={{ margin: "0 0 8px 0" }}><strong>搜索服务：</strong>为提供搜索服务，我们将收集您的日志信息，包括搜索关键词信息和点击的链接、咨询的相关问题等。</p>
+                        <p style={{ fontWeight: 600, color: "#1A1A1A", margin: "0 0 4px 0" }}>（三）提供或改进我们的产品和服务所需要的附加功能</p>
+                        <p style={{ margin: "0 0 2px 0" }}><strong>位置信息：</strong>当您使用相关服务时，我们可能会收集和处理有关您的位置信息</p>
+                        <p style={{ margin: "0 0 2px 0" }}><strong>客户服务：</strong>当您提起投诉、申诉或进行评价时，我们可能需要您提供联系方式等个人信息</p>
+                        <p style={{ margin: "0 0 2px 0" }}><strong>日历权限：</strong>用于完成插入日历行程提醒等功能</p>
+                        <p style={{ margin: "0 0 2px 0" }}><strong>摄像头权限：</strong>用于完成拍照等功能</p>
+                        <p style={{ margin: "0 0 2px 0" }}><strong>运动与健身权限：</strong>用于在小程序中展示运动步数相关功能</p>
+                        <p style={{ margin: "0 0 2px 0" }}><strong>图片上传：</strong>用于上传本地照片实现饮食、用药等添加功能</p>
+                        <p style={{ margin: 0 }}><strong>语音技术：</strong>用于语音咨询或与客服机器人进行咨询和互动</p>
+                      </div>
+                      <div>
+                        <h5 style={{ fontSize: "14px", fontWeight: 600, color: "#1A1A1A", marginBottom: "6px" }}>二、如何联系我们</h5>
+                        <p style={{ margin: "0 0 2px 0" }}><strong>公司名称：</strong>杭州易智体科技有限公司</p>
+                        <p style={{ margin: "0 0 2px 0" }}><strong>注册地址：</strong>浙江省杭州市萧山区宁围街道建设三路733号信息港五期4号楼301-27室</p>
+                        <p style={{ margin: "0 0 8px 0" }}><strong>邮箱：</strong>276599630@qq.com</p>
+                        <p style={{ margin: 0 }}>为保障我们高效处理您的问题并及时向您反馈，需要您提交身份证明、有效联系方式和书面请求及相关证据，我们会在验证您的身份处理您的请求。一般情况下，我们将在三十天内回复。</p>
+                      </div>
+                      <div>
+                        <h5 style={{ fontSize: "14px", fontWeight: 600, color: "#1A1A1A", marginBottom: "6px" }}>三、争议解决</h5>
+                        <p style={{ margin: 0 }}>因本政策以及我们处理您个人信息事宜引起的任何争议，您可随时联系体重管理平台要求给出回复，如果您对我们的回复不满意的，认为我们的个人信息处理行为严重损害了您的合法权益的，您还可以通过向【杭州易智体科技有限公司】所在地【杭州】有管辖权的人民法院提起诉讼来寻求解决方案。</p>
+                      </div>
+                      <div>
+                        <h5 style={{ fontSize: "14px", fontWeight: 600, color: "#1A1A1A", marginBottom: "6px" }}>四、定义和名词解释</h5>
+                        <p style={{ margin: "0 0 4px 0" }}><strong>体重管理平台：</strong>中国领先的健康体重管理领域领导者，互联网产品和服务品牌。</p>
+                        <p style={{ margin: "0 0 4px 0" }}><strong>个人信息：</strong>个人信息是指以电子或者其他方式记录的能够单独或者与其他信息结合识别自然人个人身份的各种信息，包括但不限于自然人的姓名、出生日期、身份证件号码、个人生物识别信息、住址、电话号码等。</p>
+                        <p style={{ margin: 0 }}><strong>个人敏感信息：</strong>个人敏感信息是指一旦泄露、非法提供或滥用可能危害人身和财产安全，极易导致个人名誉、身心健康受到损害或歧视性待遇等的个人信息。</p>
+                      </div>
+                      <div style={{ textAlign: "center", paddingTop: "8px", borderTop: "1px solid #EAEBFF" }}>
+                        <p style={{ margin: "0 0 4px 0", fontWeight: 600, color: "#1A1A1A" }}>感谢您对体重管理平台以及体重管理产品和服务的信任和使用！</p>
+                        <p style={{ margin: 0, color: "#8A8A93" }}>杭州易智体科技有限公司</p>
+                      </div>
+                      <div>
+                        <h5 style={{ fontSize: "14px", fontWeight: 600, color: "#1A1A1A", marginBottom: "6px" }}>附件一：《体重管理平台账户注销须知》</h5>
+                        <p style={{ margin: "0 0 8px 0" }}><strong>亲爱的体重管理平台用户：</strong></p>
+                        <p style={{ margin: "0 0 8px 0" }}><strong>一、</strong>您可在体重管理平台小程序中提供的联系我们的联系方式，向我们申请注销您在平台中的账号并删除账号信息，在您提出申请后，我们将通过客服人员联系您并通过您提供的有效身份证明等方式核实您的身份后，在15日内为您注销账户。</p>
+                        <p style={{ margin: "0 0 8px 0" }}><strong>二、</strong>您在向我们申请注销前，应当认真阅读《账户注销须知》（以下称"《注销须知》"），请您务必审慎阅读、充分理解协议中相关条款内容。</p>
+                        <div style={{ backgroundColor: "#FFF8E1", borderRadius: "8px", padding: "12px" }}>
+                          <p style={{ fontWeight: 600, color: "#1A1A1A", margin: "0 0 6px 0" }}>【特别提示】</p>
+                          <p style={{ margin: 0 }}>当您按照注销页面提示填写信息、阅读并同意本《注销须知》及相关条款与条件且完成全部注销程序后，即表示您已充分阅读、理解并接受本《注销须知》的全部内容。阅读本《注销须知》的过程中，如果您不同意相关任何条款和条件约定，请务必立即停止账户注销程序。我们在此善意地提醒您，您的账户一旦注销，将无法恢复，请您谨慎操作。</p>
                         </div>
                       </div>
                     </div>
