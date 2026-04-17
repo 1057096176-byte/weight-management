@@ -23,6 +23,8 @@ export default function Home() {
   const [doctorDrawerOpen, setDoctorDrawerOpen] = useState(false);
   const messagesEndRef = useRef<HTMLDivElement>(null);
   const messagesContainerRef = useRef<HTMLDivElement>(null);
+  const userInfoFormRef = useRef<HTMLDivElement>(null);
+  const [highlightForm, setHighlightForm] = useState(false);
   const location = useLocation();
   const navigate = useNavigate();
   
@@ -314,6 +316,21 @@ export default function Home() {
 
     if (!message.trim()) return;
 
+    // 预测模式下新用户未绑定，拦截手术预测
+    if (aiModeRef.current === "predict" && isNewUser && userInfoStage !== "complete" && message.includes("手术")) {
+      setMessages((prev) => [
+        ...prev,
+        { id: Date.now().toString(), message, isUser: true, time: new Date().toLocaleTimeString("zh-CN", { hour: "2-digit", minute: "2-digit" }) },
+        { id: (Date.now() + 1).toString(), message: "请先完善基本信息，才能使用手术预测功能 👆", isUser: false, time: new Date().toLocaleTimeString("zh-CN", { hour: "2-digit", minute: "2-digit" }) },
+      ]);
+      setTimeout(() => {
+        userInfoFormRef.current?.scrollIntoView({ behavior: "smooth", block: "center" });
+        setHighlightForm(true);
+        setTimeout(() => setHighlightForm(false), 2000);
+      }, 300);
+      return;
+    }
+
     // 新用户信息收集流程
     if (isNewUser && userInfoStage !== "idle" && userInfoStage !== "complete") {
       // 添加用户消息
@@ -498,6 +515,16 @@ export default function Home() {
       // 预测模式
       if (currentMode === "predict" && !showQuickAccessCard) {
         if (message.includes("手术")) {
+          if (!isNewUser) {
+            setMessages((prev) => [...prev, {
+              id: `surgery-info-${Date.now()}`,
+              message: "",
+              isUser: false,
+              time: new Date().toLocaleTimeString("zh-CN", { hour: "2-digit", minute: "2-digit" }),
+              isSurgeryInfoCard: true,
+            }]);
+            return;
+          }
           setMessages((prev) => [...prev, {
             id: (Date.now() + 1).toString(),
             message: "",
@@ -618,6 +645,18 @@ export default function Home() {
         }, 500);
       }
     }, 1000);
+  };
+
+  const handleSurgeryInfoSubmit = (_data: { diabetes: boolean; hypertension: boolean; hyperlipidemia: boolean }) => {
+    setTimeout(() => {
+      setMessages((prev) => [...prev, {
+        id: Date.now().toString(),
+        message: "",
+        isUser: false,
+        time: new Date().toLocaleTimeString("zh-CN", { hour: "2-digit", minute: "2-digit" }),
+        ...generateSurgeryPredictMessage(),
+      }]);
+    }, 600);
   };
 
   const generateSurgeryPredictMessage = () => {
@@ -1380,21 +1419,22 @@ export default function Home() {
           {/* 聊天消息 */}
           <div className="space-y-4">
             {messages.map((msg) => (
-              <ChatMessage 
-                key={msg.id} 
-                {...msg}
-                onQuestionClick={handleQuickQuestion}
-                onRefreshQuestions={handleRefreshQuestions}
-                onTriageStart={handleTriageStart}
-                onTriageAnswer={handleTriageAnswer}
-                onUserInfoSubmit={handleUserInfoSubmit}
-                onMealProductClick={(product) => {
-                  // 设置选中的代餐价格
-                  setSelectedMealPrice(product.price);
-                  // 直接打开支付弹窗
-                  setShowPaymentModal(true);
-                }}
-              />
+              <div key={msg.id} ref={msg.id === "user-info-form" ? userInfoFormRef : undefined}>
+                <ChatMessage
+                  {...msg}
+                  onQuestionClick={handleQuickQuestion}
+                  onRefreshQuestions={handleRefreshQuestions}
+                  onTriageStart={handleTriageStart}
+                  onTriageAnswer={handleTriageAnswer}
+                  onUserInfoSubmit={handleUserInfoSubmit}
+                  highlightUserInfoForm={msg.id === "user-info-form" ? highlightForm : false}
+                  onSurgeryInfoSubmit={handleSurgeryInfoSubmit}
+                  onMealProductClick={(product) => {
+                    setSelectedMealPrice(product.price);
+                    setShowPaymentModal(true);
+                  }}
+                />
+              </div>
             ))}
           </div>
           

@@ -16,6 +16,7 @@ import {
   CheckCircle2,
 } from "lucide-react";
 import { UserInfoFormCard } from "./UserInfoFormCard";
+import { SurgeryInfoCard } from "./SurgeryInfoCard";
 import { MealProductList } from "./MealProductList";
 
 interface Doctor {
@@ -46,6 +47,24 @@ interface ChatMessageProps {
   isUserInfoFormCard?: boolean;
   isMealProductCard?: boolean;
   isMealProductList?: boolean;
+  isHospitalCard?: boolean;
+  isSurgeryInfoCard?: boolean;
+  onSurgeryInfoSubmit?: (data: { diabetes: boolean; hypertension: boolean; hyperlipidemia: boolean }) => void;
+  isSurgeryPredictCard?: boolean;
+  surgeryPredictData?: {
+    height: number;
+    currentWeight: number;
+    bmi: number;
+    weight3m: number;
+    weight6m: number;
+    weight1y: number;
+    loss1y: number;
+    diabetesRate: number;
+    bpRate: number;
+    lipidRate: number;
+  };
+  isExpertMode?: boolean;
+  citations?: string[];
   isActivated?: boolean; // 计划是否已开启
   quickAccessType?: "all" | "checkin" | "triage" | "doctor";
   questions?: string[];
@@ -54,6 +73,7 @@ interface ChatMessageProps {
   onTriageStart?: () => void;
   onTriageAnswer?: (answer: string) => void;
   onUserInfoSubmit?: (data: { phone: string; name: string; height: number; weight: number }) => void;
+  highlightUserInfoForm?: boolean;
   onMealProductClick?: (product: any) => void;
   doctors?: Doctor[];
 }
@@ -76,6 +96,13 @@ export function ChatMessage({
   isUserInfoFormCard = false,
   isMealProductCard = false,
   isMealProductList = false,
+  isHospitalCard = false,
+  isSurgeryInfoCard = false,
+  onSurgeryInfoSubmit,
+  isSurgeryPredictCard = false,
+  surgeryPredictData,
+  isExpertMode = false,
+  citations,
   isActivated = false, // 计划是否已开启
   quickAccessType,
   questions,
@@ -84,6 +111,7 @@ export function ChatMessage({
   onTriageStart,
   onTriageAnswer,
   onUserInfoSubmit,
+  highlightUserInfoForm = false,
   onMealProductClick,
   doctors,
 }: ChatMessageProps) {
@@ -233,6 +261,7 @@ export function ChatMessage({
                     : "0 2px 8px rgba(0, 0, 0, 0.04)",
                   width: "fit-content",
                   maxWidth: "100%",
+                  borderLeft: (!isUser && isExpertMode) ? "3px solid #2B5BFF" : undefined,
                 }}
               >
                 <p
@@ -240,17 +269,185 @@ export function ChatMessage({
                 >
                   {message}
                 </p>
+                {/* 专家模式引用块 */}
+                {isExpertMode && citations && citations.length > 0 && (
+                  <div style={{ marginTop: "12px", borderTop: "1px solid #E8EAFF", paddingTop: "10px" }}>
+                    <p style={{ fontSize: "11px", color: "#8A8A93", marginBottom: "6px", fontWeight: 500 }}>📚 参考来源</p>
+                    {citations.map((c, i) => (
+                      <div key={i} style={{ display: "flex", alignItems: "flex-start", gap: "6px", marginBottom: "4px" }}>
+                        <span style={{
+                          fontSize: "10px", fontWeight: 600, color: "#2B5BFF",
+                          background: "#EAEBFF", borderRadius: "3px",
+                          padding: "1px 5px", flexShrink: 0, marginTop: "1px",
+                        }}>[{i + 1}]</span>
+                        <span style={{ fontSize: "11px", color: "#6B7280", lineHeight: "1.5" }}>{c}</span>
+                      </div>
+                    ))}
+                  </div>
+                )}
               </div>
             )}
 
           {/* 用户信息表单卡片 */}
           {isUserInfoFormCard && onUserInfoSubmit && time && (
-            <UserInfoFormCard onSubmit={onUserInfoSubmit} time={time} />
+            <UserInfoFormCard onSubmit={onUserInfoSubmit} time={time} highlight={highlightUserInfoForm} />
+          )}
+
+          {isSurgeryInfoCard && onSurgeryInfoSubmit && (
+            <SurgeryInfoCard onSubmit={onSurgeryInfoSubmit} />
           )}
 
           {/* 代餐产品列表 */}
           {isMealProductList && onMealProductClick && (
             <MealProductList onProductClick={onMealProductClick} />
+          )}
+
+          {/* 手术效果预测卡片 */}
+          {isSurgeryPredictCard && surgeryPredictData && (
+            <motion.div
+              initial={{ opacity: 0, y: 8 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ delay: 0.15 }}
+              style={{
+                marginTop: "12px",
+                background: "#FFFFFF",
+                borderRadius: "16px",
+                overflow: "hidden",
+                boxShadow: "0 2px 12px rgba(0,0,0,0.06)",
+                border: "1px solid rgba(0,0,0,0.06)",
+              }}
+            >
+              {/* 头部 */}
+              <div style={{ background: "linear-gradient(135deg, #2B5BFF 0%, #7B5BFF 100%)", padding: "16px" }}>
+                <p style={{ margin: 0, fontSize: "13px", color: "rgba(255,255,255,0.8)" }}>基于您的数据</p>
+                <p style={{ margin: "4px 0 0", fontSize: "17px", fontWeight: 700, color: "#FFFFFF" }}>手术效果预测报告</p>
+                <p style={{ margin: "4px 0 0", fontSize: "12px", color: "rgba(255,255,255,0.7)" }}>
+                  身高 {surgeryPredictData.height}cm · 体重 {surgeryPredictData.currentWeight}kg · BMI {surgeryPredictData.bmi}
+                </p>
+              </div>
+
+              <div style={{ padding: "16px" }}>
+                {/* 体重变化时间轴 */}
+                <p style={{ margin: "0 0 12px", fontSize: "13px", fontWeight: 600, color: "#1A1A1A" }}>📉 减重预测（袖状胃切除）</p>
+                <div style={{ display: "flex", alignItems: "flex-end", gap: "6px", marginBottom: "16px" }}>
+                  {[
+                    { label: "术前", weight: surgeryPredictData.currentWeight, color: "#E5E7EB", textColor: "#6B7280" },
+                    { label: "3个月", weight: surgeryPredictData.weight3m, color: "#BFDBFE", textColor: "#2563EB" },
+                    { label: "6个月", weight: surgeryPredictData.weight6m, color: "#93C5FD", textColor: "#1D4ED8" },
+                    { label: "1年", weight: surgeryPredictData.weight1y, color: "#2B5BFF", textColor: "#FFFFFF" },
+                  ].map((item) => {
+                    const maxW = surgeryPredictData.currentWeight;
+                    const barH = Math.round((item.weight / maxW) * 80);
+                    return (
+                      <div key={item.label} style={{ flex: 1, display: "flex", flexDirection: "column", alignItems: "center", gap: "4px" }}>
+                        <span style={{ fontSize: "12px", fontWeight: 600, color: "#1A1A1A" }}>{item.weight}kg</span>
+                        <div style={{ width: "100%", height: `${barH}px`, background: item.color, borderRadius: "6px 6px 0 0", minHeight: "20px" }} />
+                        <span style={{ fontSize: "11px", color: "#9CA3AF" }}>{item.label}</span>
+                      </div>
+                    );
+                  })}
+                </div>
+                <div style={{ background: "#F0F9FF", borderRadius: "8px", padding: "10px 12px", marginBottom: "16px" }}>
+                  <span style={{ fontSize: "13px", color: "#1D4ED8" }}>
+                    预计术后1年减重 <strong>{surgeryPredictData.loss1y}kg</strong>，超重体重减少率约 <strong>65–75%</strong>
+                  </span>
+                </div>
+
+                {/* 代谢改善 */}
+                <p style={{ margin: "0 0 10px", fontSize: "13px", fontWeight: 600, color: "#1A1A1A" }}>💊 代谢指标改善预测</p>
+                {[
+                  { label: "糖尿病缓解", rate: surgeryPredictData.diabetesRate, color: "#10B981" },
+                  { label: "高血压改善", rate: surgeryPredictData.bpRate, color: "#3B82F6" },
+                  { label: "血脂恢复正常", rate: surgeryPredictData.lipidRate, color: "#8B5CF6" },
+                ].map((item) => (
+                  <div key={item.label} style={{ marginBottom: "10px" }}>
+                    <div style={{ display: "flex", justifyContent: "space-between", marginBottom: "4px" }}>
+                      <span style={{ fontSize: "12px", color: "#6B7280" }}>{item.label}</span>
+                      <span style={{ fontSize: "12px", fontWeight: 600, color: item.color }}>{item.rate}%</span>
+                    </div>
+                    <div style={{ height: "6px", background: "#F3F4F6", borderRadius: "3px", overflow: "hidden" }}>
+                      <div style={{ height: "100%", width: `${item.rate}%`, background: item.color, borderRadius: "3px", transition: "width 1s ease" }} />
+                    </div>
+                  </div>
+                ))}
+
+                {/* 免责声明 */}
+                <p style={{ margin: "12px 0 0", fontSize: "11px", color: "#9CA3AF", lineHeight: "1.5" }}>
+                  ⚠️ 以上预测基于临床统计数据，实际效果因个体差异而异，请以主治医生评估为准。
+                </p>
+              </div>
+            </motion.div>
+          )}
+
+          {/* 预约挂号医院卡片 */}
+          {isHospitalCard && (
+            <motion.div
+              initial={{ opacity: 0, y: 8 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ delay: 0.15 }}
+              style={{
+                marginTop: "12px",
+                background: "#FFFFFF",
+                borderRadius: "16px",
+                overflow: "hidden",
+                boxShadow: "0 2px 12px rgba(0,0,0,0.06)",
+                border: "1px solid rgba(0,0,0,0.06)",
+              }}
+            >
+              <a
+                href="https://www.srrsh.com"
+                target="_blank"
+                rel="noopener noreferrer"
+                style={{ textDecoration: "none", display: "block" }}
+              >
+                <div
+                  style={{
+                    display: "flex",
+                    alignItems: "center",
+                    gap: "12px",
+                    padding: "14px 16px",
+                    cursor: "pointer",
+                    transition: "background 0.15s",
+                  }}
+                  onMouseEnter={(e) => { e.currentTarget.style.background = "#F8F9FF"; }}
+                  onMouseLeave={(e) => { e.currentTarget.style.background = "transparent"; }}
+                >
+                  {/* Logo */}
+                  <div style={{
+                    width: "48px", height: "48px", borderRadius: "50%", flexShrink: 0,
+                    overflow: "hidden", background: "#f5f5f5",
+                    border: "1px solid rgba(0,0,0,0.08)",
+                  }}>
+                    <img src="/srrsh-logo.webp" alt="邵逸夫医院" style={{ width: "100%", height: "100%", objectFit: "contain" }} />
+                  </div>
+
+                  {/* 内容 */}
+                  <div style={{ flex: 1, minWidth: 0 }}>
+                    {/* 医院名称 */}
+                    <p style={{ margin: "0 0 3px", fontSize: "15px", fontWeight: 600, color: "#1A1A1A", lineHeight: "1.4" }}>
+                      浙江大学医学院附属邵逸夫医院
+                    </p>
+                    {/* 距离 + 地址 */}
+                    <p style={{ margin: "0 0 6px", fontSize: "12px", color: "#9CA3AF", lineHeight: "1.4", overflow: "hidden", textOverflow: "ellipsis", whiteSpace: "nowrap" }}>
+                      2.3km｜浙江省杭州市江干区庆春东路3号
+                    </p>
+                    {/* 标签 */}
+                    <div style={{ display: "flex", gap: "6px" }}>
+                      {["三甲", "综合医院"].map((tag) => (
+                        <span key={tag} style={{
+                          fontSize: "11px", color: tag === "三甲" ? "#E53935" : "#2B5BFF",
+                          background: tag === "三甲" ? "#FFF0F0" : "#EAEBFF",
+                          borderRadius: "4px", padding: "1px 6px", lineHeight: "18px",
+                        }}>{tag}</span>
+                      ))}
+                    </div>
+                  </div>
+
+                  {/* 箭头 */}
+                  <span style={{ fontSize: "16px", color: "#C0C0C8", flexShrink: 0, marginTop: "2px" }}>›</span>
+                </div>
+              </a>
+            </motion.div>
           )}
 
           {/* 智能导诊入口卡片 */}
@@ -2147,7 +2344,7 @@ export function ChatMessage({
                   border: "none",
                   cursor: "pointer",
                   display: "flex",
-                  alignItems: "center",
+                  alignItems: "flex-start",
                   justifyContent: "center",
                   zIndex: 1,
                   transition: "all 0.2s",
