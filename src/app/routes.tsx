@@ -17,7 +17,8 @@ import Devices from "./pages/Devices";
 import Addresses from "./pages/Addresses";
 import NotFound from "./pages/NotFound";
 
-export const router = createBrowserRouter([
+export const router = createBrowserRouter(
+  [
   {
     path: "/",
     Component: Root,
@@ -41,4 +42,6 @@ export const router = createBrowserRouter([
       { path: "*", Component: NotFound },
     ],
   },
-]);
+  ],
+  { basename: import.meta.env.BASE_URL }
+);
