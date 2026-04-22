@@ -5,6 +5,19 @@
       <meta charset="UTF-8" />
       <meta name="viewport" content="width=device-width, initial-scale=1.0" />
       <title>体重管理 新</title>
+      <script>
+        (function() {
+          var query = window.location.search;
+          if (query) {
+            var params = new URLSearchParams(query);
+            var p = params.get('p');
+            if (p) {
+              var h = params.get('h') || '';
+              window.history.replaceState(null, null, '/weight-management' + p + h);
+            }
+          }
+        })();
+      </script>
     </head>
 
     <body>
